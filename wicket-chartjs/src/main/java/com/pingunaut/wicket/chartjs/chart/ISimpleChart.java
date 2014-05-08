@@ -18,6 +18,7 @@ package com.pingunaut.wicket.chartjs.chart;
 import java.util.List;
 
 import com.pingunaut.wicket.chartjs.data.SimpleColorValueChartData;
+import com.pingunaut.wicket.chartjs.data.TitleColorValueChartData;
 import com.pingunaut.wicket.chartjs.options.AbstractChartOptions;
 
 /**
@@ -38,7 +39,7 @@ import com.pingunaut.wicket.chartjs.options.AbstractChartOptions;
  * 
  * @author Martin Spielmann
  */
-public interface ISimpleChart<D extends SimpleColorValueChartData, O extends AbstractChartOptions> extends IChart<O> {
+public interface ISimpleChart<D extends TitleColorValueChartData, O extends AbstractChartOptions> extends IChart<O> {
 
 	/**
 	 * Gets the data.

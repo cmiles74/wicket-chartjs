@@ -47,6 +47,15 @@ public class PieChartOptions extends AbstractChartOptions {
 	/** The animate scale. */
 	private Boolean animateScale;
 
+    /** Flag indicating if the legend should be displayed */
+    private Boolean legend;
+
+    /** Flag indicating if the chart should be annotated */
+    private Boolean annotateDisplay;
+
+    /** Flag indicating if the data should be showed in the chart */
+    private Boolean inGraphDataShow;
+
 	/**
 	 * Gets the segment show stroke.
 	 * 
@@ -145,4 +154,27 @@ public class PieChartOptions extends AbstractChartOptions {
 		this.animateScale = animateScale;
 	}
 
+    public Boolean getLegend() {
+        return legend;
+    }
+
+    public void setLegend(Boolean legend) {
+        this.legend = legend;
+    }
+
+    public Boolean getAnnotateDisplay() {
+        return annotateDisplay;
+    }
+
+    public void setAnnotateDisplay(Boolean annotateDisplay) {
+        this.annotateDisplay = annotateDisplay;
+    }
+
+    public Boolean getInGraphDataShow() {
+        return inGraphDataShow;
+    }
+
+    public void setInGraphDataShow(Boolean inGraphDataShow) {
+        this.inGraphDataShow = inGraphDataShow;
+    }
 }

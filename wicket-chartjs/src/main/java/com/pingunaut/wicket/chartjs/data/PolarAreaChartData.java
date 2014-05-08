@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
  * @author Martin Spielmann
  */
 @JsonInclude(Include.NON_NULL)
-public class PolarAreaChartData extends SimpleColorValueChartData {
+public class PolarAreaChartData extends TitleColorValueChartData {
 
 	@JsonIgnore
 	private static final long serialVersionUID = -5122104387810776812L;

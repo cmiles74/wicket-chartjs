@@ -18,6 +18,10 @@ package com.pingunaut.wicket.chartjs.example;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.pingunaut.wicket.chartjs.chart.impl.Doughnut;
+import com.pingunaut.wicket.chartjs.core.panel.DoughnutChartPanel;
+import com.pingunaut.wicket.chartjs.data.DoughnutChartData;
+import com.pingunaut.wicket.chartjs.options.DoughnutChartOptions;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.Model;
 
@@ -46,10 +50,6 @@ public class ExamplePage extends WebPage {
 	@Override
 	protected void onInitialize() {
 		super.onInitialize();
-		LineChartPanel lineChartPanel = new LineChartPanel("lineChart", Model.of(new Line()));
-		add(lineChartPanel);
-		PieChartPanel pieChartPanel = new PieChartPanel("pieChart", Model.of(new Pie()));
-		add(pieChartPanel);
 
 		List<String> labels = new ArrayList<String>();
 		labels.add("jan");
@@ -63,12 +63,31 @@ public class ExamplePage extends WebPage {
 		values1.add(6);
 		values1.add(7);
 
-		lineChartPanel.getChart().getData().getDatasets().add(new LineDataSet(values1));
-		lineChartPanel.getChart().getData().getLabels().addAll(labels);
+        List<DoughnutChartData> doughnutData = new ArrayList<DoughnutChartData>() {{
+            add(new DoughnutChartData(30, "Things", "#f7464a"));
+            add(new DoughnutChartData(50, "Gazooks", "#e2eae9"));
+            add(new DoughnutChartData(100, "Zuckers", "#d4ccc5"));
+            add(new DoughnutChartData(40, "Gladiolas", "#949fb1"));
+            add(new DoughnutChartData(50, "Cookies", "#4d5360"));
+        }};
 
-		for (Integer i : values1) {
-			pieChartPanel.getChart().getData().add(new PieChartData(i, "#" + i + i + i));
-		}
+        // line chart
+        LineChartPanel lineChartPanel = new LineChartPanel("lineChart", Model.of(new Line()));
+        lineChartPanel.getChart().getData().getDatasets().add(new LineDataSet(values1));
+        lineChartPanel.getChart().getData().getLabels().addAll(labels);
+        add(lineChartPanel);
 
+        // pie chart
+        PieChartPanel pieChartPanel = new PieChartPanel("pieChart", Model.of(new Pie()));
+        for (Integer i : values1) {
+            pieChartPanel.getChart().getData().add(new PieChartData(i, "#" + i + i + i));
+        }
+        add(pieChartPanel);
+
+        // doughnut chart
+        DoughnutChartPanel doughnutChartPanel = new DoughnutChartPanel("doughnutChart", Model.of(new Doughnut()), 640, 400);
+        doughnutChartPanel.getChart().setData(doughnutData);
+        doughnutChartPanel.getChart().getOptions().setInGraphDataShow(true);
+        add(doughnutChartPanel);
 	}
 }

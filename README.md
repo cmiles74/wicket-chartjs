@@ -1,4 +1,8 @@
-<h1>This project combines Wicket with chart.js</h1>
+<p>This project provides an experimental fork of Wicket-ChartJS that uses
+<a href="https://github.com/FVANCOP/ChartNew.js">ChartNew.js</a> instead of Chart.js. chief motivation is to get labels
+on pie charts. Currently this library is under development and is usable but it's incomplete.</p>
+
+<h1>This project combines Wicket with Chart.js</h1>
 <p>this project provides all chart.js charts. 
 it is completely open source and free to use (also in commercial projects). 
 create beautiful charts and graphs in your wicket project. no flash, just html, css and javascript.</p>

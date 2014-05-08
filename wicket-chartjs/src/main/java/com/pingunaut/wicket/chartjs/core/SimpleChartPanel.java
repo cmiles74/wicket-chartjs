@@ -15,6 +15,7 @@
  ******************************************************************************/
 package com.pingunaut.wicket.chartjs.core;
 
+import com.pingunaut.wicket.chartjs.data.TitleColorValueChartData;
 import org.apache.wicket.model.IModel;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -40,7 +41,8 @@ import com.pingunaut.wicket.chartjs.options.AbstractChartOptions;
  * @param <O>
  *            the generic type of the chart's options
  */
-public abstract class SimpleChartPanel<C extends ISimpleChart<D, O>, D extends SimpleColorValueChartData, O extends AbstractChartOptions> extends AbstractChartPanel<C, O> {
+public abstract class SimpleChartPanel<C extends ISimpleChart<D, O>, D extends TitleColorValueChartData,
+        O extends AbstractChartOptions> extends AbstractChartPanel<C, O> {
 
 	private static final long serialVersionUID = 2899070514574123978L;
 

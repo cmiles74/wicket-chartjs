@@ -19,6 +19,7 @@ import java.util.List;
 
 import com.pingunaut.wicket.chartjs.chart.ISimpleChart;
 import com.pingunaut.wicket.chartjs.data.SimpleColorValueChartData;
+import com.pingunaut.wicket.chartjs.data.TitleColorValueChartData;
 import com.pingunaut.wicket.chartjs.options.AbstractChartOptions;
 
 /**
@@ -40,7 +41,8 @@ import com.pingunaut.wicket.chartjs.options.AbstractChartOptions;
  * 
  * @author Martin Spielmann
  */
-public abstract class AbstractSimpleChart<D extends SimpleColorValueChartData, O extends AbstractChartOptions> extends AbstractChart<O> implements ISimpleChart<D, O> {
+public abstract class AbstractSimpleChart<D extends TitleColorValueChartData, O extends AbstractChartOptions>
+        extends AbstractChart<O> implements ISimpleChart<D, O> {
 
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 4176838766615656412L;

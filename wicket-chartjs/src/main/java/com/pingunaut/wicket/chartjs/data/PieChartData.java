@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
  * @author Martin Spielmann, Brill Pappin
  */
 @JsonInclude(Include.NON_NULL)
-public class PieChartData extends SimpleColorValueChartData {
+public class PieChartData extends TitleColorValueChartData {
 
 	@JsonIgnore
 	private static final long serialVersionUID = -5122104387810776812L;

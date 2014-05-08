@@ -4,4 +4,5 @@ bin
 .settings
 .project
 .idea
+*.iml
 target/
