@@ -1,5 +1,5 @@
 <p>This project provides an experimental fork of Wicket-ChartJS that uses
-<a href="https://github.com/FVANCOP/ChartNew.js">ChartNew.js</a> instead of Chart.js. chief motivation is to get labels
+<a href="https://github.com/FVANCOP/ChartNew.js">ChartNew.js</a> instead of Chart.js. The primary motivation is to get labels
 on pie charts. Currently this library is under development and is usable but it's incomplete.</p>
 
 <h1>This project combines Wicket with Chart.js</h1>
