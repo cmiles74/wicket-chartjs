@@ -40,9 +40,11 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	// ** The next three are required if scaleOverride is true **
 	/** The scale steps. */
 	private Integer scaleSteps;
-	/** The scale step width. */
+
+    /** The scale step width. */
 	private Integer scaleStepWidth;
-	/** The scale start value. */
+
+    /** The scale start value. */
 	private Integer scaleStartValue;
 
 	/** The scale line color. */

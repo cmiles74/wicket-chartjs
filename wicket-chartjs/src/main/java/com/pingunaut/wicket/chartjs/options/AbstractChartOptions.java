@@ -45,6 +45,15 @@ public abstract class AbstractChartOptions implements Serializable {
 	/** The on animation complete. */
 	private String onAnimationComplete;
 
+    /** Flag indicating if the legend should be displayed */
+    private Boolean legend;
+
+    /** Flag indicating if the chart should be annotated */
+    private Boolean annotateDisplay;
+
+    /** Flag indicating if the data should be showed in the chart */
+    private Boolean inGraphDataShow;
+
 	/**
 	 * Gets the animation.
 	 * 
@@ -121,4 +130,57 @@ public abstract class AbstractChartOptions implements Serializable {
 		this.onAnimationComplete = onAnimationComplete;
 	}
 
+    /**
+     * Returns the flag indicating if the legend should be visible
+     *
+     * @return Flag value
+     */
+    public Boolean getLegend() {
+        return legend;
+    }
+
+    /**
+     * Sets the value of the flag indicating if the legend should be visible.
+     *
+     * @param legend Flag indicating if the legend should be visible
+     */
+    public void setLegend(Boolean legend) {
+        this.legend = legend;
+    }
+
+    /**
+     * Returns the flag indicating that the display should be annotated.
+     *
+     * @return Flag indicating that the display should be annotated
+     */
+    public Boolean getAnnotateDisplay() {
+        return annotateDisplay;
+    }
+
+    /**
+     * Sets the flag indicating that the display should be annotated.
+     *
+     * @param annotateDisplay Flag indicating that the display should be annotated.
+     */
+    public void setAnnotateDisplay(Boolean annotateDisplay) {
+        this.annotateDisplay = annotateDisplay;
+    }
+
+    /**
+     * Returns the flag indicating if labels should be drawn near the chart components (i.e. pie slices, nodes, etc.)
+     *
+     * @return Flag indicating if graph data labels should be displayed
+     */
+    public Boolean getInGraphDataShow() {
+        return inGraphDataShow;
+    }
+
+    /**
+     * Sets the flag indicating if labels should be drawn near the chart components (i.e. pie slices, nodes, etc.)
+
+     * @param inGraphDataShow Flag indicating if graph data labels should be displayed
+     */
+    public void setInGraphDataShow(Boolean inGraphDataShow) {
+        this.inGraphDataShow = inGraphDataShow;
+    }
 }

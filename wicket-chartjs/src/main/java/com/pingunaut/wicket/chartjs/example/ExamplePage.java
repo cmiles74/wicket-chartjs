@@ -22,6 +22,7 @@ import com.pingunaut.wicket.chartjs.chart.impl.Doughnut;
 import com.pingunaut.wicket.chartjs.core.panel.DoughnutChartPanel;
 import com.pingunaut.wicket.chartjs.data.DoughnutChartData;
 import com.pingunaut.wicket.chartjs.options.DoughnutChartOptions;
+import com.pingunaut.wicket.chartjs.options.PieChartOptions;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.Model;
 
@@ -88,6 +89,11 @@ public class ExamplePage extends WebPage {
         DoughnutChartPanel doughnutChartPanel = new DoughnutChartPanel("doughnutChart", Model.of(new Doughnut()), 640, 400);
         doughnutChartPanel.getChart().setData(doughnutData);
         doughnutChartPanel.getChart().getOptions().setInGraphDataShow(true);
+        doughnutChartPanel.getChart().getOptions().setCrossText(PieChartOptions.CrossText.MID_CENTER);
+        doughnutChartPanel.getChart().getOptions().setCrossTextOverlay(true);
+        doughnutChartPanel.getChart().getOptions().setCrossTextFontFamily("Arial");
+        doughnutChartPanel.getChart().getOptions().setCrossTextFontSize(24);
+        doughnutChartPanel.getChart().getOptions().setCrossTextFontColor("black");
         add(doughnutChartPanel);
 	}
 }
