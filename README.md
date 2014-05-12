@@ -1,34 +1,33 @@
-<p>This project provides an experimental fork of Wicket-ChartJS that uses
-<a href="https://github.com/FVANCOP/ChartNew.js">ChartNew.js</a> instead of Chart.js. The primary motivation is to get labels
-on pie charts. Currently this library is under development and is usable but it's incomplete.</p>
+Wicket-ChartJS
+==============
+This project combines Wicket with [Chart.js][0], it provides all chart.js charts and it is completely open source and 
+free to use (also in commercial projects). You can use it to create beautiful charts and graphs in your wicket project.
+No flash, just html, css and javascript. More information is available on the [project's homepage][1], [examples are also
+available][2].
 
-<h1>This project combines Wicket with Chart.js</h1>
-<p>this project provides all chart.js charts. 
-it is completely open source and free to use (also in commercial projects). 
-create beautiful charts and graphs in your wicket project. no flash, just html, css and javascript.</p>
-<h2>project homepage</h2>
-[homepage](http://pingunaut.com/wicket-chartjs).
-<h3>Examples</h3>
-See the [examples](http://pingunaut.com/wicket-chartjs/examples).
+Wicket-ChartJS using the FVANCOP Fork
+-------------------------------------
 
+This fork of Wicket-Chart uses [the FVANCOP fork of ChartJS][3] instead of the main project in order to provide extra (and,
+to my mind, critical) features like labels for charts. This fork is under active development, labels are supported
+and more features will be implements in the future.
 
+How to Use It
+-------------
 
-<h3>How to use</h3>
+Add a new ChartPanel to your Wicket Page.
 
-<ol>
-<li>using maven? include artifact in your pom (artifact and jar coming soon). <br />
-NOT using maven? download the jar from the homepage and add it to your classpath</li>
-<li>add a new ChartPanel to your Page</li>
-<pre>
+```java
 /*
  * Line Chart
  */
 LineChartPanel lineChart = new LineChartPanel("lineChartPanel", Model.of(new Line()));
 add(lineChart);
-</pre>
+```
 
-<li>fill in some data</li>
-<pre>
+Fill in some data.
+
+```java
 List<String> labels = new ArrayList<String>();
 labels.add("jan");
 labels.add("feb");
@@ -46,17 +45,24 @@ lineData.getDatasets().add(new LineDataSet(values1));
 
 lineChart.getChart().setData(lineData);
 lineData.setLabels(labels);
-</pre>
-<li>add the chart inside your html markup</li>
-<pre>
-&lt;div wicket:id="lineChartPanel"&gt;&lt;/div&gt;
-</pre>
-</ol>
-<h5>That was it :) That's your first Chart in Java with wicket-chartjs</h5>
+```
 
-<h3>Compatibility</h3>
-<ul>
-<li>IE 9 and upwards</li>
-<li>IE 7 and 8 in parts</li>
-<li>the rest isn't a problem ;)</li>
-<ul>
+Add the chart inside your html markup.
+
+```html
+<div wicket:id="lineChartPanel">[CHART]</div>
+```
+
+That was it :) That's your first Chart in Java with wicket-chartjs.
+
+Compatibility
+-------------
+* IE 9 and upwards</li>
+* IE 7 and 8 in parts</li>
+* the rest isn't a problem ;)
+
+
+[0]: http://www.chartjs.org
+[1]: http://pingunaut.com/wicket-chartjs
+[2]: http://pingunaut.com/wicket-chartjs/examples
+[3]: https://github.com/FVANCOP/ChartNew.js
