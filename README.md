@@ -22,7 +22,7 @@ Fill in some data.
     add(new DoughnutChartData(30, "Things", Color.BLUE));
     add(new DoughnutChartData(50, "Gazooks", Color.DARK_GRAY));
     add(new DoughnutChartData(100, "Zuckers", Color.MAGENTA));
-    add(new DoughnutChartData(40, "Gladiolas", Color.ORANG));
+    add(new DoughnutChartData(40, "Gladiolas", Color.ORANGE));
     add(new DoughnutChartData(50, "Cookies", Color.GREEN));
 }};
 ```
