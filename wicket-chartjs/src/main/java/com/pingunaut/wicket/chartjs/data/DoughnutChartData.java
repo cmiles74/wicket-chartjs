@@ -19,6 +19,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+import java.awt.*;
+
 /**
  * The Class DoughnutChartData provides chart data used by doughnut charts.
  * 
@@ -43,6 +45,18 @@ public class DoughnutChartData extends TitleColorValueChartData {
 	}
 
     /**
+     * Instantiates a new doughnut chart data.
+     *
+     * @param value
+     *            the value
+     * @param color
+     *            the color
+     */
+    public DoughnutChartData(Integer value, Color color) {
+        super(value, color);
+    }
+
+    /**
      * Creates a new doughnut chart data instance.
      *
      * @param value Numeric value of this data point
@@ -53,4 +67,14 @@ public class DoughnutChartData extends TitleColorValueChartData {
         super(value, title, color);
     }
 
+    /**
+     * Creates a new doughnut chart data instance.
+     *
+     * @param value Numeric value of this data point
+     * @param title Title that accompanies this data point
+     * @param color Color of this data point
+     */
+    public DoughnutChartData(Integer value, String title, Color color) {
+        super(value, title, color);
+    }
 }

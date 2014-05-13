@@ -36,6 +36,19 @@ public class Doughnut extends AbstractSimpleChart<DoughnutChartData, DoughnutCha
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -6898362145345731457L;
 
+    public Doughnut() {
+        this(new ArrayList<DoughnutChartData>(), new DoughnutChartOptions());
+    }
+
+    public Doughnut(DoughnutChartOptions options) {
+        this(new ArrayList<DoughnutChartData>(), options);
+    }
+
+    public Doughnut(List<DoughnutChartData> data, DoughnutChartOptions options) {
+        super(options);
+        this.data = data;
+    }
+
 	/*
 	 * (non-Javadoc)
 	 * 

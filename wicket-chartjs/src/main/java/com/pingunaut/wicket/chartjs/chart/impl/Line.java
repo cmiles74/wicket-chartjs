@@ -33,6 +33,14 @@ public class Line extends AbstractDataSetChart<LineChartData<LineDataSet>, LineC
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -3014944174538037710L;
 
+    public Line() {
+        this(new LineChartOptions());
+    }
+
+    public Line(LineChartOptions options) {
+        super(options);
+    }
+
 	/*
 	 * (non-Javadoc)
 	 * 

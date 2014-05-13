@@ -2,6 +2,7 @@ package com.pingunaut.wicket.chartjs.data;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+import java.awt.*;
 import java.io.Serializable;
 
 /**
@@ -33,6 +34,28 @@ public class TitleColorValueChartData implements Serializable {
      */
     public TitleColorValueChartData(Integer value, String color) {
         this(value, null, color);
+    }
+
+    /**
+     * Create a new instance.
+     *
+     * @param value Numeric value of this data point
+     * @param color Color of this data point
+     */
+    public TitleColorValueChartData(Integer value, Color color) {
+        this(value, null, WebColor.toCssColor(color));
+    }
+
+    /**
+     * Create a new instance.
+     *
+     * @param value Numeric value of this data point
+     * @param title Title that accompanies this data pont
+     * @param color Color of this data point
+     */
+    public TitleColorValueChartData(Integer value, String title, Color color) {
+
+        this(value, title, WebColor.toCssColor(color));
     }
 
     /**

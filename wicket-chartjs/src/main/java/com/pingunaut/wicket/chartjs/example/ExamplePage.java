@@ -15,7 +15,9 @@
  ******************************************************************************/
 package com.pingunaut.wicket.chartjs.example;
 
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.pingunaut.wicket.chartjs.chart.impl.Doughnut;
@@ -64,14 +66,6 @@ public class ExamplePage extends WebPage {
 		values1.add(6);
 		values1.add(7);
 
-        List<DoughnutChartData> doughnutData = new ArrayList<DoughnutChartData>() {{
-            add(new DoughnutChartData(30, "Things", "#f7464a"));
-            add(new DoughnutChartData(50, "Gazooks", "#e2eae9"));
-            add(new DoughnutChartData(100, "Zuckers", "#d4ccc5"));
-            add(new DoughnutChartData(40, "Gladiolas", "#949fb1"));
-            add(new DoughnutChartData(50, "Cookies", "#4d5360"));
-        }};
-
         // line chart
         LineChartPanel lineChartPanel = new LineChartPanel("lineChart", Model.of(new Line()));
         lineChartPanel.getChart().getData().getDatasets().add(new LineDataSet(values1));
@@ -86,14 +80,22 @@ public class ExamplePage extends WebPage {
         add(pieChartPanel);
 
         // doughnut chart
-        DoughnutChartPanel doughnutChartPanel = new DoughnutChartPanel("doughnutChart", Model.of(new Doughnut()), 640, 400);
-        doughnutChartPanel.getChart().setData(doughnutData);
-        doughnutChartPanel.getChart().getOptions().setInGraphDataShow(true);
-        doughnutChartPanel.getChart().getOptions().setCrossText(PieChartOptions.CrossText.MID_CENTER);
-        doughnutChartPanel.getChart().getOptions().setCrossTextOverlay(true);
-        doughnutChartPanel.getChart().getOptions().setCrossTextFontFamily("Arial");
-        doughnutChartPanel.getChart().getOptions().setCrossTextFontSize(24);
-        doughnutChartPanel.getChart().getOptions().setCrossTextFontColor("black");
+        DoughnutChartPanel doughnutChartPanel = new DoughnutChartPanel("doughnutChart",
+                Model.of(new Doughnut(
+                        new ArrayList<DoughnutChartData>() {{
+                            add(new DoughnutChartData(30, "Things", Color.BLUE));
+                            add(new DoughnutChartData(50, "Gazooks", "#e2eae9"));
+                            add(new DoughnutChartData(100, "Zuckers", "#d4ccc5"));
+                            add(new DoughnutChartData(40, "Gladiolas", "#949fb1"));
+                            add(new DoughnutChartData(50, "Cookies", Color.GREEN));
+                        }},
+                        new DoughnutChartOptions()
+                                .setInGraphDataShow(true)
+                                .setCrossText(325)
+                                .setCrossTextOverlay(true)
+                                .setCrossTextFontColor(Color.RED)
+                                .setCrossTextFontSize(48)
+                                .setCrossTextFontColor(Color.RED))), 640, 400);
         add(doughnutChartPanel);
 	}
 }

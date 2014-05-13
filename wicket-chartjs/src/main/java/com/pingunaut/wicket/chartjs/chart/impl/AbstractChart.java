@@ -39,6 +39,10 @@ public abstract class AbstractChart<O extends AbstractChartOptions> implements I
 	/** The mapper. */
 	private static ObjectMapper mapper;
 
+    public AbstractChart(O options) {
+        this.options = options;
+    }
+
 	/*
 	 * (non-Javadoc)
 	 * 

@@ -69,8 +69,9 @@ public abstract class AbstractChartOptions implements Serializable {
 	 * @param animation
 	 *            decides whether to animate the chart (default is true)
 	 */
-	public void setAnimation(Boolean animation) {
+	public AbstractChartOptions setAnimation(Boolean animation) {
 		this.animation = animation;
+        return this;
 	}
 
 	/**
@@ -88,8 +89,9 @@ public abstract class AbstractChartOptions implements Serializable {
 	 * @param animationSteps
 	 *            the number of animation steps (default is 60)
 	 */
-	public void setAnimationSteps(Integer animationSteps) {
+	public AbstractChartOptions setAnimationSteps(Integer animationSteps) {
 		this.animationSteps = animationSteps;
+        return this;
 	}
 
 	/**
@@ -107,8 +109,9 @@ public abstract class AbstractChartOptions implements Serializable {
 	 * @param animationEasing
 	 *            the animation easing effect (default is "easeOutQuart"F)
 	 */
-	public void setAnimationEasing(String animationEasing) {
+	public AbstractChartOptions setAnimationEasing(String animationEasing) {
 		this.animationEasing = animationEasing;
+        return this;
 	}
 
 	/**
@@ -126,8 +129,9 @@ public abstract class AbstractChartOptions implements Serializable {
 	 * @param onAnimationComplete
 	 *            a function, that fires when the animation is complete
 	 */
-	public void setOnAnimationComplete(String onAnimationComplete) {
+	public AbstractChartOptions setOnAnimationComplete(String onAnimationComplete) {
 		this.onAnimationComplete = onAnimationComplete;
+        return this;
 	}
 
     /**
@@ -144,8 +148,9 @@ public abstract class AbstractChartOptions implements Serializable {
      *
      * @param legend Flag indicating if the legend should be visible
      */
-    public void setLegend(Boolean legend) {
+    public AbstractChartOptions setLegend(Boolean legend) {
         this.legend = legend;
+        return this;
     }
 
     /**
@@ -162,8 +167,9 @@ public abstract class AbstractChartOptions implements Serializable {
      *
      * @param annotateDisplay Flag indicating that the display should be annotated.
      */
-    public void setAnnotateDisplay(Boolean annotateDisplay) {
+    public AbstractChartOptions setAnnotateDisplay(Boolean annotateDisplay) {
         this.annotateDisplay = annotateDisplay;
+        return this;
     }
 
     /**
@@ -180,7 +186,8 @@ public abstract class AbstractChartOptions implements Serializable {
 
      * @param inGraphDataShow Flag indicating if graph data labels should be displayed
      */
-    public void setInGraphDataShow(Boolean inGraphDataShow) {
+    public AbstractChartOptions setInGraphDataShow(Boolean inGraphDataShow) {
         this.inGraphDataShow = inGraphDataShow;
+        return this;
     }
 }

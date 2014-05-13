@@ -36,6 +36,19 @@ public class PolarArea extends AbstractSimpleChart<PolarAreaChartData, PolarArea
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -6898362145345731457L;
 
+    public PolarArea() {
+        this(new ArrayList<PolarAreaChartData>(), new PolarAreaChartOptions());
+    }
+
+    public PolarArea(PolarAreaChartOptions options) {
+        this(new ArrayList<PolarAreaChartData>(), options);
+    }
+
+    public PolarArea(List<PolarAreaChartData> data, PolarAreaChartOptions options) {
+        super(options);
+        this.data = data;
+    }
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -43,9 +56,6 @@ public class PolarArea extends AbstractSimpleChart<PolarAreaChartData, PolarArea
 	 */
 	@Override
 	public PolarAreaChartOptions getOptions() {
-		if (options == null) {
-			options = new PolarAreaChartOptions();
-		}
 		return options;
 	}
 
@@ -57,9 +67,6 @@ public class PolarArea extends AbstractSimpleChart<PolarAreaChartData, PolarArea
 	 */
 	@Override
 	public List<PolarAreaChartData> getData() {
-		if (data == null) {
-			data = new ArrayList<PolarAreaChartData>();
-		}
 		return data;
 	}
 }

@@ -21,8 +21,12 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.pingunaut.wicket.chartjs.chart.impl.Pie;
+import com.pingunaut.wicket.chartjs.data.WebColor;
 
+import java.awt.*;
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -36,49 +40,6 @@ public class PieChartOptions extends AbstractChartOptions {
 
 	@JsonIgnore
 	private static final long serialVersionUID = -5356780831848556616L;
-
-    /**
-     * Enumeration of cross text locations.
-     */
-    public enum CrossText {
-        UP_LEFT,
-        UP_CENTER,
-        UP_RIGHT,
-        MID_LEFT,
-        MID_CENTER,
-        MID_RIGHT,
-        DOWN_LEFT,
-        DOWN_CENTER,
-        DOWN_RIGHT;
-
-        private static Map<String, CrossText> nameMap = new HashMap<String, CrossText>() {{
-            put("up left", UP_LEFT);
-            put("up center", UP_CENTER);
-            put("up right", UP_RIGHT);
-            put("mid left", MID_LEFT);
-            put("mid center", MID_CENTER);
-            put("mid right", MID_RIGHT);
-            put("down left", DOWN_LEFT);
-            put("down center", DOWN_CENTER);
-            put("down right", DOWN_RIGHT);
-        }};
-
-        @JsonCreator
-        public static CrossText forValue(String value){
-            return nameMap.get(value.toLowerCase());
-        }
-
-        @JsonValue
-        public String toValue() {
-
-            for (Map.Entry<String, CrossText> entry : nameMap.entrySet()) {
-                if (entry.getValue() == this)
-                    return entry.getKey();
-            }
-
-            return null;
-        }
-    }
 
 	/** The segment show stroke. */
 	private Boolean segmentShowStroke;
@@ -96,22 +57,22 @@ public class PieChartOptions extends AbstractChartOptions {
 	private Boolean animateScale;
 
     /** Location of cross text. */
-    private CrossText crossText;
+    private List<String> crossText;
 
     /** Flag indicating if cross text should be displayed. */
-    private Boolean crossTextOverlay;
+    private List<Boolean> crossTextOverlay;
 
     /** Font family used for the cross text. */
-    private String crossTextFontFamily;
+    private List<String> crossTextFontFamily;
 
     /** Font size used for the cross text. */
-    private Integer crossTextFontSize;
+    private List<Integer> crossTextFontSize;
 
     /** Font color used for the cross text. */
-    private String crossTextFontColor;
+    private List<String> crossTextFontColor;
 
     /** Font style used for the cross text. */
-    private String crossTextFontStyle;
+    private List<String> crossTextFontStyle;
 
 	/**
 	 * Gets the segment show stroke.
@@ -129,8 +90,9 @@ public class PieChartOptions extends AbstractChartOptions {
 	 *            decides whether we should show a stroke on each segment
 	 *            (default is true)
 	 */
-	public void setSegmentShowStroke(Boolean segmentShowStroke) {
+	public PieChartOptions setSegmentShowStroke(Boolean segmentShowStroke) {
 		this.segmentShowStroke = segmentShowStroke;
+        return this;
 	}
 
 	/**
@@ -148,8 +110,9 @@ public class PieChartOptions extends AbstractChartOptions {
 	 * @param segmentStrokeColor
 	 *            the new segment stroke color (default is "#fff").
 	 */
-	public void setSegmentStrokeColor(String segmentStrokeColor) {
+	public PieChartOptions setSegmentStrokeColor(String segmentStrokeColor) {
 		this.segmentStrokeColor = segmentStrokeColor;
+        return this;
 	}
 
 	/**
@@ -167,8 +130,9 @@ public class PieChartOptions extends AbstractChartOptions {
 	 * @param segmentStrokeWidth
 	 *            the new segment stroke width (default is 2).
 	 */
-	public void setSegmentStrokeWidth(Integer segmentStrokeWidth) {
+	public PieChartOptions setSegmentStrokeWidth(Integer segmentStrokeWidth) {
 		this.segmentStrokeWidth = segmentStrokeWidth;
+        return this;
 	}
 
 	/**
@@ -187,8 +151,9 @@ public class PieChartOptions extends AbstractChartOptions {
 	 *            decides whether we animate the rotation of the pie (default is
 	 *            true).
 	 */
-	public void setAnimateRotate(Boolean animateRotate) {
+	public PieChartOptions setAnimateRotate(Boolean animateRotate) {
 		this.animateRotate = animateRotate;
+        return this;
 	}
 
 	/**
@@ -207,55 +172,87 @@ public class PieChartOptions extends AbstractChartOptions {
 	 *            decides whether we animate scaling the Pie from the center
 	 *            (default is false).
 	 */
-	public void setAnimateScale(Boolean animateScale) {
+	public PieChartOptions setAnimateScale(Boolean animateScale) {
 		this.animateScale = animateScale;
+        return this;
 	}
 
-    public CrossText getCrossText() {
+    public List<String> getCrossText() {
         return crossText;
     }
 
-    public void setCrossText(CrossText crossText) {
+    public PieChartOptions setCrossText(List<String> crossText) {
         this.crossText = crossText;
+        return this;
     }
 
-    public Boolean getCrossTextOverlay() {
+    public PieChartOptions setCrossText(Object crossText) {
+        this.crossText = Arrays.asList(new String[]{crossText.toString()});
+        return this;
+    }
+
+    public List<Boolean> getCrossTextOverlay() {
         return crossTextOverlay;
     }
 
-    public void setCrossTextOverlay(Boolean crossTextOverlay) {
+    public PieChartOptions setCrossTextOverlay(List<Boolean> crossTextOverlay) {
         this.crossTextOverlay = crossTextOverlay;
+        return this;
     }
 
-    public String getCrossTextFontFamily() {
+    public PieChartOptions setCrossTextOverlay(Boolean crossTextOverlay) {
+        this.crossTextOverlay = Arrays.asList(new Boolean[]{crossTextOverlay});
+        return this;
+    }
+
+    public List<String> getCrossTextFontFamily() {
         return crossTextFontFamily;
     }
 
-    public void setCrossTextFontFamily(String crossTextFontFamily) {
+    public PieChartOptions setCrossTextFontFamily(List<String> crossTextFontFamily) {
         this.crossTextFontFamily = crossTextFontFamily;
+        return this;
     }
 
-    public Integer getCrossTextFontSize() {
+    public PieChartOptions setCrossTextFontFamily(String crossTextFontFamily) {
+        this.crossTextFontFamily = Arrays.asList(new String[]{crossTextFontFamily});
+        return this;
+    }
+
+    public List<Integer> getCrossTextFontSize() {
         return crossTextFontSize;
     }
 
-    public void setCrossTextFontSize(Integer crossTextFontSize) {
+    public PieChartOptions setCrossTextFontSize(List<Integer> crossTextFontSize) {
         this.crossTextFontSize = crossTextFontSize;
+        return this;
     }
 
-    public String getCrossTextFontColor() {
+    public PieChartOptions setCrossTextFontSize(Integer crossTextFontSize) {
+        this.crossTextFontSize = Arrays.asList(new Integer[]{crossTextFontSize});
+        return this;
+    }
+
+    public List<String> getCrossTextFontColor() {
         return crossTextFontColor;
     }
 
-    public void setCrossTextFontColor(String crossTextFontColor) {
+    public PieChartOptions setCrossTextFontColor(List<String> crossTextFontColor) {
         this.crossTextFontColor = crossTextFontColor;
+        return this;
     }
 
-    public String getCrossTextFontStyle() {
+    public PieChartOptions setCrossTextFontColor(Color color) {
+        this.crossTextFontColor = Arrays.asList(new String[]{WebColor.toCssColor(color)});
+        return this;
+    }
+
+    public List<String> getCrossTextFontStyle() {
         return crossTextFontStyle;
     }
 
-    public void setCrossTextFontStyle(String crossTextFontStyle) {
+    public PieChartOptions setCrossTextFontStyle(List<String> crossTextFontStyle) {
         this.crossTextFontStyle = crossTextFontStyle;
+        return this;
     }
 }

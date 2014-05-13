@@ -50,6 +50,10 @@ public abstract class AbstractSimpleChart<D extends TitleColorValueChartData, O 
 	/** The data. */
 	protected List<D> data;
 
+    public AbstractSimpleChart(O options) {
+        super(options);
+    }
+
 	/*
 	 * (non-Javadoc)
 	 * 

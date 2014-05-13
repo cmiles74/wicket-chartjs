@@ -50,6 +50,15 @@ public abstract class AbstractDataSetChart<D extends AbstractChartData<S>, O ext
 	/** The data. */
 	protected D data;
 
+    public AbstractDataSetChart(O options) {
+        super(options);
+    }
+
+    public AbstractDataSetChart(D data, O options) {
+        super(options);
+        this.data = data;
+    }
+
 	/*
 	 * (non-Javadoc)
 	 * 

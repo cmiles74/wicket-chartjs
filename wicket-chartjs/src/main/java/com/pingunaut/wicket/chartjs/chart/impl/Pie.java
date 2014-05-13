@@ -34,6 +34,19 @@ public class Pie extends AbstractSimpleChart<PieChartData, PieChartOptions> impl
 
 	private static final long serialVersionUID = -6898362145345731457L;
 
+    public Pie() {
+        this(new ArrayList<PieChartData>(), new PieChartOptions());
+    }
+
+    public Pie(PieChartOptions options) {
+        this(new ArrayList<PieChartData>(), options);
+    }
+
+    public Pie(List<PieChartData> data, PieChartOptions options) {
+        super(options);
+        this.data = data;
+    }
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -41,9 +54,6 @@ public class Pie extends AbstractSimpleChart<PieChartData, PieChartOptions> impl
 	 */
 	@Override
 	public PieChartOptions getOptions() {
-		if (options == null) {
-			options = new PieChartOptions();
-		}
 		return options;
 	}
 

@@ -32,6 +32,18 @@ public class Bar extends AbstractDataSetChart<BarChartData<BarDataSet>, BarChart
 
 	private static final long serialVersionUID = -332976997065056554L;
 
+    public Bar() {
+        super(new BarChartData<BarDataSet>(), new BarChartOptions());
+    }
+
+    public Bar(BarChartOptions options) {
+        super(new BarChartData<BarDataSet>(), options);
+    }
+
+    public Bar(BarChartData<BarDataSet> data, BarChartOptions options) {
+        super(data, options);
+    }
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -39,9 +51,6 @@ public class Bar extends AbstractDataSetChart<BarChartData<BarDataSet>, BarChart
 	 */
 	@Override
 	public BarChartOptions getOptions() {
-		if (options == null) {
-			options = new BarChartOptions();
-		}
 		return options;
 	}
 

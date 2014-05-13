@@ -33,6 +33,18 @@ public class Radar extends AbstractDataSetChart<RadarChartData<RadarDataSet>, Ra
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 123723866473637510L;
 
+    public Radar() {
+        super(new RadarChartData<RadarDataSet>(), new RadarChartOptions());
+    }
+
+    public Radar(RadarChartOptions options){
+        super(new RadarChartData<RadarDataSet>(), options);
+    }
+
+    public Radar(RadarChartData<RadarDataSet> data, RadarChartOptions options){
+        super(data, options);
+    }
+
 	/*
 	 * (non-Javadoc)
 	 * 
@@ -40,9 +52,6 @@ public class Radar extends AbstractDataSetChart<RadarChartData<RadarDataSet>, Ra
 	 */
 	@Override
 	public RadarChartOptions getOptions() {
-		if (options == null) {
-			options = new RadarChartOptions();
-		}
 		return options;
 	}
 
@@ -54,9 +63,6 @@ public class Radar extends AbstractDataSetChart<RadarChartData<RadarDataSet>, Ra
 	 */
 	@Override
 	public RadarChartData<RadarDataSet> getData() {
-		if (data == null) {
-			data = new RadarChartData<RadarDataSet>();
-		}
 		return data;
 	}
 }
