@@ -15,6 +15,7 @@
  ******************************************************************************/
 package com.pingunaut.wicket.chartjs.data;
 
+import java.awt.*;
 import java.io.Serializable;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -32,6 +33,18 @@ public class SimpleColorValueChartData implements Serializable {
 
 	@JsonIgnore
 	private static final long serialVersionUID = -3393548464561735841L;
+
+    /**
+     * Instantiates new simple color value chart data.
+     *
+     * @param value
+     *            the value
+     * @param color
+     *            the color
+     */
+    public SimpleColorValueChartData(Integer value, Color color) {
+        this(value, WebColor.toCssColor(color));
+    }
 
 	/**
 	 * Instantiates new simple color value chart data.
@@ -70,6 +83,16 @@ public class SimpleColorValueChartData implements Serializable {
 	public void setColor(String color) {
 		this.color = color;
 	}
+
+    /**
+     * Sets the color.
+     *
+     * @param color
+     *            the new color
+     */
+    public void setColor(Color color) {
+        this.color =  WebColor.toCssColor(color);
+    }
 
 	/**
 	 * Gets the value.
