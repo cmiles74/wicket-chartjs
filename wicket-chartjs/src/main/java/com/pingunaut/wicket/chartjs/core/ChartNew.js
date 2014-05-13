@@ -733,7 +733,7 @@ window.Chart = function (context) {
 			      inGraphDataShow: false,
 			      inGraphDataPaddingRadius: 5,
 			      inGraphDataPaddingAngle: 0,
-            inGraphDataTmpl: "<%=(v1 == ''? '' : v1+', ')+ v2 + ' (' + v6 + ' %)'%>",
+            inGraphDataTmpl: "<%=(v1 == ''? '' : v1+', ')+ v2 + ' (' + v6 + '%)'%>",
             inGraphDataAlign : "off-center",   // "right", "center", "left", "off-center" or "to-center"
             inGraphDataVAlign : "off-center",  // "bottom", "center", "top", "off-center" or "to-center"
             inGraphDataRotate : 0,   // rotateAngle value (0->360) , "inRadiusAxis" or "inRadiusAxisRotateLabels"
@@ -770,7 +770,7 @@ window.Chart = function (context) {
             animateRotate: true,
             animateScale: false,
             onAnimationComplete: null,
-            annotateLabel: "<%=(v1 == ''? '' : v1+', ')+ v2 + ' (' + v6 + ' %)'%>",
+            annotateLabel: "<%=(v1 == ''? '' : v1+', ')+ v2 + ' (' + v6 + '%)'%>",
             startAngle : 90
         };
         chart.PolarArea.defaults = mergeChartConfig(chart.defaults.commonOptions, chart.PolarArea.defaults);
@@ -852,7 +852,7 @@ window.Chart = function (context) {
 			      inGraphDataShow: false,
 			      inGraphDataPaddingRadius: 5,
 			      inGraphDataPaddingAngle: 0,
-            inGraphDataTmpl: "<%=(v1 == ''? '' : v1+', ')+ v2 + ' (' + v6 + ' %)'%>",
+            inGraphDataTmpl: "<%=(v1 == ''? '' : v1+', ')+ v2 + ' (' + v6 + '%)'%>",
             inGraphDataAlign : "off-center",   // "right", "center", "left", "off-center" or "to-center"
             inGraphDataVAlign : "off-center",  // "bottom", "center", "top", "off-center" or "to-center"
             inGraphDataRotate : 0,   // rotateAngle value (0->360) , "inRadiusAxis" or "inRadiusAxisRotateLabels"
@@ -872,7 +872,7 @@ window.Chart = function (context) {
             animateRotate: true,
             animateScale: false,
             onAnimationComplete: null,
-            annotateLabel: "<%=(v1 == ''? '' : v1+', ')+ v2 + ' (' + v6 + ' %)'%>",
+            annotateLabel: "<%=(v1 == ''? '' : v1+', ')+ v2 + ' (' + v6 + '%)'%>",
             startAngle: 90,
             radiusScale : 1
         };
@@ -892,7 +892,7 @@ window.Chart = function (context) {
 			      inGraphDataShow: false,
 			      inGraphDataPaddingRadius: 5,
 			      inGraphDataPaddingAngle: 0,
-            inGraphDataTmpl: "<%=(v1 == ''? '' : v1+', ')+ v2 + ' (' + v6 + ' %)'%>",
+            inGraphDataTmpl: "<%=(v1 == ''? '' : v1+', ')+ v2 + ' (' + v6 + '%)'%>",
             inGraphDataAlign : "off-center",   // "right", "center", "left", "off-center" or "to-center"
             inGraphDataVAlign : "off-center",  // "bottom", "center", "top", "off-center" or "to-center"
             inGraphDataRotate : 0,   // rotateAngle value (0->360) , "inRadiusAxis" or "inRadiusAxisRotateLabels"
@@ -912,7 +912,7 @@ window.Chart = function (context) {
             animateRotate: true,
             animateScale: false,
             onAnimationComplete: null,
-            annotateLabel: "<%=(v1 == ''? '' : v1+', ')+ v2 + ' (' + v6 + ' %)'%>",
+            annotateLabel: "<%=(v1 == ''? '' : v1+', ')+ v2 + ' (' + v6 + '%)'%>",
             startAngle: 90,
             radiusScale : 1
         };
@@ -1042,7 +1042,7 @@ window.Chart = function (context) {
             animationSteps: 60,
             animationEasing: "easeOutQuart",
             onAnimationComplete: null,
-            annotateLabel: "<%=(v1 == '' ? '' : v1) + (v1!='' && v2 !='' ? '/' : '')+(v2 == '' ? '' : v2)+(v1!='' || v2 !='' ? ', ' : '') + v3 + ' (' + v6 + ' %)'%>"
+            annotateLabel: "<%=(v1 == '' ? '' : v1) + (v1!='' && v2 !='' ? '/' : '')+(v2 == '' ? '' : v2)+(v1!='' || v2 !='' ? ', ' : '') + v3 + ' (' + v6 + '%)'%>"
          };   
             
 
@@ -1104,7 +1104,7 @@ window.Chart = function (context) {
             animationSteps: 60,
             animationEasing: "easeOutQuart",
             onAnimationComplete: null,
-            annotateLabel: "<%=(v1 == '' ? '' : v1) + (v1!='' && v2 !='' ? '/' : '')+(v2 == '' ? '' : v2)+(v1!='' || v2 !='' ? ', ' : '') + v3 + ' (' + v6 + ' %)'%>"
+            annotateLabel: "<%=(v1 == '' ? '' : v1) + (v1!='' && v2 !='' ? '/' : '')+(v2 == '' ? '' : v2)+(v1!='' || v2 !='' ? ', ' : '') + v3 + ' (' + v6 + '%)'%>"
          };   
             
 
@@ -1166,7 +1166,7 @@ window.Chart = function (context) {
             animationSteps: 60,
             animationEasing: "easeOutQuart",
             onAnimationComplete: null,
-            annotateLabel: "<%=(v1 == '' ? '' : v1) + (v1!='' && v2 !='' ? '/' : '')+(v2 == '' ? '' : v2)+(v1!='' || v2 !='' ? ', ' : '') + v3 + ' (' + v6 + ' %)'%>"
+            annotateLabel: "<%=(v1 == '' ? '' : v1) + (v1!='' && v2 !='' ? '/' : '')+(v2 == '' ? '' : v2)+(v1!='' || v2 !='' ? ', ' : '') + v3 + ' (' + v6 + '%)'%>"
          };   
 
         // merge annotate defaults
@@ -1226,7 +1226,7 @@ window.Chart = function (context) {
             animationSteps: 60,
             animationEasing: "easeOutQuart",
             onAnimationComplete: null,
-            annotateLabel: "<%=(v1 == '' ? '' : v1) + (v1!='' && v2 !='' ? '/' : '')+(v2 == '' ? '' : v2)+(v1!='' || v2 !='' ? ', ' : '') + v3 + ' (' + v6 + ' %)'%>"
+            annotateLabel: "<%=(v1 == '' ? '' : v1) + (v1!='' && v2 !='' ? '/' : '')+(v2 == '' ? '' : v2)+(v1!='' || v2 !='' ? ', ' : '') + v3 + ' (' + v6 + '%)'%>"
             
         };
 
