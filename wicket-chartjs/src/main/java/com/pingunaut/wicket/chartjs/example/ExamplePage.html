@@ -2,31 +2,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>wicket-chartjs example</title>
-
-    <script type="text/javascript" >
-        /*<![CDATA[*/
-        Wicket.Event.add(window, "domready", function(event) {
-            WicketCharts['chart9']=buildChart('chart9');;
-            WicketCharts['chart9'].Doughnut([
-                {"value":30,"title":"Thingermabobs","color":"#f7464a"},
-                {"value":50,"title":"Gazooks","color":"#e2eae9"},
-                {"value":100,"title":"Zuckers","color":"#d4ccc5"},
-                {"value":40,"title":"Gladiolas","color":"#949fb1"},
-                {"value":50,"title":"Cookies","color":"#4d5360"}],
-                {"inGraphDataShow":true,"crossText":["2039", "Hello"],
-                 "crossTextOverlay":[true],"crossTextFontFamily":["Arial"],
-                 "crossTextFontSize":[58],"crossTextFontColor":["black"],
-                 "crossTextFunction":"dispPct"});
-            ;});
-        /*]]>*/
-    </script>
 </head>
 <body>
 	<div wicket:id="lineChart"></div>
 	<div wicket:id="pieChart"></div>
-    <div id="workingChart">
-        <canvas id="chart9" width="640" height="400"></canvas>
-    </div>
     <div wicket:id="doughnutChart"></div>
 </body>
 </html>

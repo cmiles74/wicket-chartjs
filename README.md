@@ -15,42 +15,36 @@ and more features will be implements in the future.
 How to Use It
 -------------
 
-Add a new ChartPanel to your Wicket Page.
-
-```java
-/*
- * Line Chart
- */
-LineChartPanel lineChart = new LineChartPanel("lineChartPanel", Model.of(new Line()));
-add(lineChart);
-```
-
 Fill in some data.
 
 ```java
-List<String> labels = new ArrayList<String>();
-labels.add("jan");
-labels.add("feb");
-labels.add("mar");
-labels.add("apr");
+ List<DoughnutChartData> data = new ArrayList<DoughnutChartData>() {{
+    add(new DoughnutChartData(30, "Things", Color.BLUE));
+    add(new DoughnutChartData(50, "Gazooks", Color.DARK_GRAY));
+    add(new DoughnutChartData(100, "Zuckers", Color.MAGENTA));
+    add(new DoughnutChartData(40, "Gladiolas", Color.ORANG));
+    add(new DoughnutChartData(50, "Cookies", Color.GREEN));
+}};
+```
 
-List<Integer> values1 = new ArrayList<Integer>();
-values1.add(4);
-values1.add(2);
-values1.add(6);
-values1.add(7);
+Add a new ChartPanel to your Wicket Page.
 
-LineChartData<LineDataSet> lineData = new LineChartData<LineDataSet>();
-lineData.getDatasets().add(new LineDataSet(values1));
-
-lineChart.getChart().setData(lineData);
-lineData.setLabels(labels);
+```java
+add(new DoughnutChartPanel("chartPanel",
+    Model.of(new Doughnut(data, 
+        new DoughnutChartOptions()
+            .setInGraphDataShow(true)
+            .setCrossText(325)
+            .setCrossTextOverlay(true)
+            .setCrossTextFontColor(Color.RED)
+            .setCrossTextFontSize(48)
+            .setCrossTextFontColor(Color.RED)));
 ```
 
 Add the chart inside your html markup.
 
 ```html
-<div wicket:id="lineChartPanel">[CHART]</div>
+<div wicket:id="chartPanel">[CHART]</div>
 ```
 
 That was it :) That's your first Chart in Java with wicket-chartjs.

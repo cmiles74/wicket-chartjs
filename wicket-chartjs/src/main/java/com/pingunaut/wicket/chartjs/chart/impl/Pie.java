@@ -65,9 +65,6 @@ public class Pie extends AbstractSimpleChart<PieChartData, PieChartOptions> impl
 	 */
 	@Override
 	public List<PieChartData> getData() {
-		if (data == null) {
-			data = new ArrayList<PieChartData>();
-		}
 		return data;
 	}
 }

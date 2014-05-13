@@ -232,8 +232,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 * @param scaleShowLabels
 	 *            decides whether to show labels on the scale
 	 */
-	public void setScaleShowLabels(Boolean scaleShowLabels) {
+	public AbstractScalableChartOptions setScaleShowLabels(Boolean scaleShowLabels) {
 		this.scaleShowLabels = scaleShowLabels;
+        return this;
 	}
 
 	/**
@@ -252,8 +253,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 *            an interpolated js string that can access value. (default is
 	 *            "<%=value%>").
 	 */
-	public void setScaleLabel(String scaleLabel) {
+	public AbstractScalableChartOptions setScaleLabel(String scaleLabel) {
 		this.scaleLabel = scaleLabel;
+        return this;
 	}
 
 	/**

@@ -189,4 +189,27 @@ public class LineChartOptions extends AbstractScalableChartOptions {
 		this.datasetFill = datasetFill;
 	}
 
+    @Override
+    public LineChartOptions setScaleShowLabels(Boolean scaleShowLabels) {
+        super.setScaleShowLabels(scaleShowLabels);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setLegend(Boolean legend) {
+        super.setLegend(legend);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setAnnotateDisplay(Boolean annotateDisplay) {
+        super.setAnnotateDisplay(annotateDisplay);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleLabel(String scaleLabel) {
+        super.setScaleLabel(scaleLabel);
+        return this;
+    }
 }
