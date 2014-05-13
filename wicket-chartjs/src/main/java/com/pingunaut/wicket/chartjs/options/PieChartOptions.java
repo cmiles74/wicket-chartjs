@@ -24,6 +24,7 @@ import com.pingunaut.wicket.chartjs.chart.impl.Pie;
 import com.pingunaut.wicket.chartjs.data.WebColor;
 
 import java.awt.*;
+import java.awt.datatransfer.StringSelection;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -253,6 +254,11 @@ public class PieChartOptions extends AbstractChartOptions {
 
     public PieChartOptions setCrossTextFontStyle(List<String> crossTextFontStyle) {
         this.crossTextFontStyle = crossTextFontStyle;
+        return this;
+    }
+
+    public PieChartOptions setCrossTextFontStyle(String crossTextFontStyle) {
+        this.crossTextFontStyle = Arrays.asList(new String[]{crossTextFontStyle});
         return this;
     }
 }
