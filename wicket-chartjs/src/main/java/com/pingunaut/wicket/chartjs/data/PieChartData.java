@@ -29,7 +29,6 @@ public class PieChartData extends TitleColorValueChartData {
 
 	@JsonIgnore
 	private static final long serialVersionUID = -5122104387810776812L;
-	private String label;
 
 	/**
 	 * Instantiates a new pie chart data.
@@ -43,16 +42,7 @@ public class PieChartData extends TitleColorValueChartData {
 		super(value, color);
 	}
 
-	public PieChartData(Integer value, String color, String label) {
-		super(value, color);
-		this.label = label;
-	}
-
-	public String getLabel() {
-		return label;
-	}
-
-	public void setLabel(String label) {
-		this.label = label;
-	}
+    public PieChartData(Integer value, String label, String color) {
+        super(value, label, color);
+    }
 }

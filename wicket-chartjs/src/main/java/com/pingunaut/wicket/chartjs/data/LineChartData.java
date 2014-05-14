@@ -1,12 +1,12 @@
 /*******************************************************************************
  * Copyright 2013 Martin Spielmann
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *   http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,16 +17,34 @@ package com.pingunaut.wicket.chartjs.data;
 
 import com.pingunaut.wicket.chartjs.data.sets.AbstractPointColorDataSet;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * The Class LineChartData provides chart data used by line charts.
- * 
- * @param <T>
- *            the generic type of it's dataset
- * 
+ *
+ * @param <T> the generic type of it's dataset
  * @author Martin Spielmann
  */
 public class LineChartData<T extends AbstractPointColorDataSet> extends AbstractChartData<T> {
 
-	private static final long serialVersionUID = 9057475640743455047L;
+    private static final long serialVersionUID = 9057475640743455047L;
 
+    /**
+     * Creates a new instance.
+     */
+    public LineChartData() {
+        this(new ArrayList<String>(), new ArrayList<T>());
+    }
+
+    /**
+     * Creates a new instance and sets its fields.
+     *
+     * @param labels   Labels for the datasets
+     * @param datasets The data sets
+     */
+    public LineChartData(List<String> labels, List<T> datasets) {
+        this.labels = labels;
+        this.datasets = datasets;
+    }
 }

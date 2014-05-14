@@ -15,26 +15,30 @@
  ******************************************************************************/
 package com.pingunaut.wicket.chartjs.example;
 
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
+import com.pingunaut.wicket.chartjs.chart.impl.Bar;
 import com.pingunaut.wicket.chartjs.chart.impl.Doughnut;
+import com.pingunaut.wicket.chartjs.chart.impl.Line;
+import com.pingunaut.wicket.chartjs.chart.impl.Pie;
+import com.pingunaut.wicket.chartjs.core.panel.BarChartPanel;
 import com.pingunaut.wicket.chartjs.core.panel.DoughnutChartPanel;
+import com.pingunaut.wicket.chartjs.core.panel.LineChartPanel;
+import com.pingunaut.wicket.chartjs.core.panel.PieChartPanel;
+import com.pingunaut.wicket.chartjs.data.BarChartData;
 import com.pingunaut.wicket.chartjs.data.DoughnutChartData;
+import com.pingunaut.wicket.chartjs.data.LineChartData;
+import com.pingunaut.wicket.chartjs.data.PieChartData;
+import com.pingunaut.wicket.chartjs.data.sets.BarDataSet;
+import com.pingunaut.wicket.chartjs.data.sets.LineDataSet;
+import com.pingunaut.wicket.chartjs.options.BarChartOptions;
 import com.pingunaut.wicket.chartjs.options.DoughnutChartOptions;
 import com.pingunaut.wicket.chartjs.options.LineChartOptions;
 import com.pingunaut.wicket.chartjs.options.PieChartOptions;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.Model;
 
-import com.pingunaut.wicket.chartjs.chart.impl.Line;
-import com.pingunaut.wicket.chartjs.chart.impl.Pie;
-import com.pingunaut.wicket.chartjs.core.panel.LineChartPanel;
-import com.pingunaut.wicket.chartjs.core.panel.PieChartPanel;
-import com.pingunaut.wicket.chartjs.data.PieChartData;
-import com.pingunaut.wicket.chartjs.data.sets.LineDataSet;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * The Class ExamplePage provides a tiny little running example of
@@ -55,39 +59,41 @@ public class ExamplePage extends WebPage {
 	protected void onInitialize() {
 		super.onInitialize();
 
-		List<String> labels = new ArrayList<String>();
-		labels.add("jan");
-		labels.add("feb");
-		labels.add("mar");
-		labels.add("apr");
-
-		List<Integer> values1 = new ArrayList<Integer>();
-		values1.add(4);
-		values1.add(2);
-		values1.add(6);
-		values1.add(7);
-
         // line chart
-        LineChartPanel lineChartPanel = new LineChartPanel("lineChart",
-                Model.of(new Line(new LineChartOptions()
+        add(new LineChartPanel("lineChart",
+                Model.of(new Line(new LineChartData(Arrays.asList(new String[]{"Jan", "Feb", "Mar", "Apr"}),
+                        new ArrayList<LineDataSet>() {{
+                            add(new LineDataSet(Arrays.asList(new Integer[]{4, 3, 5, 6})));
+                        }}
+                ), new LineChartOptions()
                         .setAnnotateDisplay(true)
-                        .setScaleShowLabels(true)
-                        .setScaleLabel("<%=value%>")
-                        .setLegend(true))));
-        lineChartPanel.getChart().getData().getDatasets().add(new LineDataSet(values1));
-        lineChartPanel.getChart().getData().getLabels().addAll(labels);
-        add(lineChartPanel);
+                        .setInGraphDataShow(true)))
+        ));
+
+        // bar chart
+        add(new BarChartPanel("barChart",
+                Model.of(new Bar(new BarChartData(Arrays.asList(new String[]{"Jan", "Feb", "Mar", "Apr"}),
+                        new ArrayList<BarDataSet>() {{
+                            add(new BarDataSet(Arrays.asList(new Integer[]{4, 3, 5, 6})));
+                        }}
+                ), new BarChartOptions()
+                        .setAnnotateDisplay(true)
+                        .setInGraphDataShow(true)))
+        ));
 
         // pie chart
-        PieChartPanel pieChartPanel = new PieChartPanel("pieChart",
-                Model.of(new Pie(new PieChartOptions())));
-        for (Integer i : values1) {
-            pieChartPanel.getChart().getData().add(new PieChartData(i, "#" + i + i + i, "Item " + i));
-        }
-        add(pieChartPanel);
+        add(new PieChartPanel("pieChart",
+                Model.of(new Pie(new ArrayList<PieChartData>() {{
+                    for (Integer i : new Integer[]{4, 2, 5, 6}) {
+                        add(new PieChartData(i, "Item " + i, "#" + i + i + i));
+                    }
+                }}, new PieChartOptions()
+                        .setInGraphDataShow(true)
+                        .setLegend(true)))
+        ));
 
         // doughnut chart
-        DoughnutChartPanel doughnutChartPanel = new DoughnutChartPanel("doughnutChart",
+        add(new DoughnutChartPanel("doughnutChart",
                 Model.of(new Doughnut(
                         new ArrayList<DoughnutChartData>() {{
                             add(new DoughnutChartData(30, "Things", Color.BLUE));
@@ -102,7 +108,9 @@ public class ExamplePage extends WebPage {
                                 .setCrossTextOverlay(true)
                                 .setCrossTextFontColor(Color.RED)
                                 .setCrossTextFontSize(48)
-                                .setCrossTextFontColor(Color.RED))), 640, 400);
-        add(doughnutChartPanel);
-	}
+                                .setCrossTextFontColor(Color.RED)
+                                .setLegend(true)
+                )), 640, 400
+        ));
+    }
 }

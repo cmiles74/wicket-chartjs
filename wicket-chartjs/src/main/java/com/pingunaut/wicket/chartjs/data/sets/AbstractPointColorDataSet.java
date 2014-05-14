@@ -15,11 +15,12 @@
  ******************************************************************************/
 package com.pingunaut.wicket.chartjs.data.sets;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The Class AbstractPointColorDataSet provides some additional point color and
@@ -43,8 +44,8 @@ public abstract class AbstractPointColorDataSet extends AbstractBaseDataSet {
 	 * Instantiates a new abstract point color data set.
 	 */
 	public AbstractPointColorDataSet() {
-
-	}
+        this(new ArrayList<Integer>());
+    }
 
 	/**
 	 * Instantiates a new abstract point color data set.
@@ -53,8 +54,8 @@ public abstract class AbstractPointColorDataSet extends AbstractBaseDataSet {
 	 *            the values
 	 */
 	public AbstractPointColorDataSet(List<Integer> values) {
-		setData(values);
-	}
+        setData(values);
+    }
 
 	/**
 	 * Gets the point color.
@@ -97,4 +98,22 @@ public abstract class AbstractPointColorDataSet extends AbstractBaseDataSet {
 		this.pointStrokeColor = pointStrokeColor;
 		return this;
 	}
+
+    @Override
+    public AbstractPointColorDataSet setFillColor(String fillColor) {
+        super.setFillColor(fillColor);
+        return this;
+    }
+
+    @Override
+    public AbstractPointColorDataSet setStrokeColor(String strokeColor) {
+        super.setStrokeColor(strokeColor);
+        return this;
+    }
+
+    @Override
+    public AbstractPointColorDataSet setData(List<Integer> data) {
+        super.setData(data);
+        return this;
+    }
 }

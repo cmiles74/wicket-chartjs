@@ -1,6 +1,3 @@
-
-
-
 /*
  * ChartNew.js
  * 
@@ -931,8 +928,8 @@ window.Chart = function (context) {
 
         chart.Line.defaults = {
 			      inGraphDataShow: false,
-			      inGraphDataPaddingX: 3,
-			      inGraphDataPaddingY: 3,
+            inGraphDataPaddingX: -3,
+            inGraphDataPaddingY: -20,
             inGraphDataTmpl: "<%=v3%>",
             inGraphDataAlign : "left",
             inGraphDataVAlign : "bottom",
@@ -1120,8 +1117,8 @@ window.Chart = function (context) {
     this.Bar = function (data, options) {
         chart.Bar.defaults = {
 			      inGraphDataShow: false,
-			      inGraphDataPaddingX: 0,
-			      inGraphDataPaddingY: 3,
+            inGraphDataPaddingX: -3,
+            inGraphDataPaddingY: -15,
             inGraphDataTmpl: "<%=v3%>",
             inGraphDataAlign : "center",
             inGraphDataVAlign : "bottom",

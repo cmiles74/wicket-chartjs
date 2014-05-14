@@ -17,6 +17,9 @@ package com.pingunaut.wicket.chartjs.data;
 
 import com.pingunaut.wicket.chartjs.data.sets.AbstractBaseDataSet;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * The Class BarChartData provides chart data used by bar charts.
  * 
@@ -29,4 +32,21 @@ public class BarChartData<T extends AbstractBaseDataSet> extends AbstractChartDa
 
 	private static final long serialVersionUID = 9057475640743455047L;
 
+    /**
+     * Creates a new instance.
+     */
+    public BarChartData() {
+        this(new ArrayList<String>(), new ArrayList<T>());
+    }
+
+    /**
+     * Creates a new instance and sets its fields.
+     *
+     * @param labels   Labels for the datasets
+     * @param datasets The data sets
+     */
+    public BarChartData(List<String> labels, List<T> datasets) {
+        this.labels = labels;
+        this.datasets = datasets;
+    }
 }
