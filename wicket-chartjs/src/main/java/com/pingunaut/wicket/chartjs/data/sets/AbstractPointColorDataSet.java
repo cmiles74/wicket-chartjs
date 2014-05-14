@@ -29,7 +29,7 @@ import java.util.List;
  * @author Martin Spielmann
  */
 @JsonInclude(Include.NON_NULL)
-public abstract class AbstractPointColorDataSet extends AbstractBaseDataSet {
+public abstract class AbstractPointColorDataSet<T> extends AbstractBaseDataSet {
 
 	@JsonIgnore
 	private static final long serialVersionUID = 1581171902504828797L;
@@ -44,7 +44,7 @@ public abstract class AbstractPointColorDataSet extends AbstractBaseDataSet {
 	 * Instantiates a new abstract point color data set.
 	 */
 	public AbstractPointColorDataSet() {
-        this(new ArrayList<Integer>());
+        this(new ArrayList<T>());
     }
 
 	/**
@@ -53,7 +53,7 @@ public abstract class AbstractPointColorDataSet extends AbstractBaseDataSet {
 	 * @param values
 	 *            the values
 	 */
-	public AbstractPointColorDataSet(List<Integer> values) {
+    public AbstractPointColorDataSet(List<T> values) {
         setData(values);
     }
 
@@ -112,7 +112,7 @@ public abstract class AbstractPointColorDataSet extends AbstractBaseDataSet {
     }
 
     @Override
-    public AbstractPointColorDataSet setData(List<Integer> data) {
+    public AbstractPointColorDataSet setData(List data) {
         super.setData(data);
         return this;
     }

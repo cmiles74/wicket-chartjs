@@ -31,7 +31,7 @@ import java.util.List;
  * @author Martin Spielmann
  */
 @JsonInclude(Include.NON_NULL)
-public abstract class AbstractBaseDataSet implements Serializable {
+public abstract class AbstractBaseDataSet<T> implements Serializable {
 
     @JsonIgnore
     private static final long serialVersionUID = 1581171902504828797L;
@@ -49,13 +49,13 @@ public abstract class AbstractBaseDataSet implements Serializable {
     /**
      * The data.
      */
-    protected List<Integer> data;
+    protected List<T> data;
 
     /**
      * Instantiates a new abstract base data set.
      */
     public AbstractBaseDataSet() {
-        this(new ArrayList<Integer>());
+        this(new ArrayList<T>());
     }
 
     /**
@@ -63,7 +63,7 @@ public abstract class AbstractBaseDataSet implements Serializable {
      *
      * @param values the data values
      */
-    public AbstractBaseDataSet(List<Integer> values) {
+    public AbstractBaseDataSet(List<T> values) {
         data = values;
     }
 
@@ -112,7 +112,7 @@ public abstract class AbstractBaseDataSet implements Serializable {
      *
      * @return the data
      */
-    public List<Integer> getData() {
+    public List<T> getData() {
         return data;
     }
 
@@ -122,7 +122,7 @@ public abstract class AbstractBaseDataSet implements Serializable {
      * @param data the data
      * @return the abstract base data set
      */
-    public AbstractBaseDataSet setData(List<Integer> data) {
+    public AbstractBaseDataSet setData(List<T> data) {
         this.data = data;
         return this;
     }

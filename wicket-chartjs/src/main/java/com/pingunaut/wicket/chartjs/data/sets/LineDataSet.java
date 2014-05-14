@@ -15,10 +15,10 @@
  ******************************************************************************/
 package com.pingunaut.wicket.chartjs.data.sets;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.pingunaut.wicket.chartjs.data.LineChartData;
+
+import java.util.List;
 
 /**
  * The Class LineDataSet provides all information needed for
@@ -26,7 +26,7 @@ import com.pingunaut.wicket.chartjs.data.LineChartData;
  * 
  * @author Martin Spielmann
  */
-public class LineDataSet extends AbstractPointColorDataSet {
+public class LineDataSet<T> extends AbstractPointColorDataSet {
 
 	@JsonIgnore
 	private static final long serialVersionUID = -3154092519924576329L;
@@ -44,8 +44,8 @@ public class LineDataSet extends AbstractPointColorDataSet {
 	 * @param values
 	 *            the values
 	 */
-	public LineDataSet(List<Integer> values) {
-		super(values);
+    public LineDataSet(List<T> values) {
+        super(values);
 	}
 
 }

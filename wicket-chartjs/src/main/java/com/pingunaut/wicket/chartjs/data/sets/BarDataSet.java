@@ -15,10 +15,10 @@
  ******************************************************************************/
 package com.pingunaut.wicket.chartjs.data.sets;
 
-import java.util.List;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.pingunaut.wicket.chartjs.data.BarChartData;
+
+import java.util.List;
 
 /**
  * The Class BarDataSet provides all information needed for {@link BarChartData}
@@ -26,7 +26,7 @@ import com.pingunaut.wicket.chartjs.data.BarChartData;
  * 
  * @author Martin Spielmann
  */
-public class BarDataSet extends AbstractBaseDataSet {
+public class BarDataSet<T> extends AbstractBaseDataSet {
 
 	@JsonIgnore
 	private static final long serialVersionUID = 3095383371272813559L;
@@ -44,8 +44,8 @@ public class BarDataSet extends AbstractBaseDataSet {
 	 * @param values
 	 *            the values
 	 */
-	public BarDataSet(List<Integer> values) {
-		super(values);
+    public BarDataSet(List<T> values) {
+        super(values);
 	}
 
 }
