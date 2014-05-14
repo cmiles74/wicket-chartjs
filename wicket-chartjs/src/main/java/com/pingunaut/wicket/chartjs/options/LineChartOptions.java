@@ -69,8 +69,9 @@ public class LineChartOptions extends AbstractScalableChartOptions {
 	 *            decides whether the line is curved between points (default is
 	 *            true).
 	 */
-	public void setBezierCurve(Boolean bezierCurve) {
+	public LineChartOptions setBezierCurve(Boolean bezierCurve) {
 		this.bezierCurve = bezierCurve;
+        return this;
 	}
 
 	/**
@@ -89,8 +90,9 @@ public class LineChartOptions extends AbstractScalableChartOptions {
 	 *            decides whether to show a dot for each point (default is
 	 *            true).
 	 */
-	public void setPointDot(Boolean pointDot) {
+	public LineChartOptions setPointDot(Boolean pointDot) {
 		this.pointDot = pointDot;
+        return this;
 	}
 
 	/**
@@ -108,8 +110,9 @@ public class LineChartOptions extends AbstractScalableChartOptions {
 	 * @param pointDotRadius
 	 *            the new point dot radius (default is 3).
 	 */
-	public void setPointDotRadius(Integer pointDotRadius) {
+	public LineChartOptions setPointDotRadius(Integer pointDotRadius) {
 		this.pointDotRadius = pointDotRadius;
+        return this;
 	}
 
 	/**
@@ -127,8 +130,9 @@ public class LineChartOptions extends AbstractScalableChartOptions {
 	 * @param pointDotStrokeWidth
 	 *            the new point dot stroke width (default is 1).
 	 */
-	public void setPointDotStrokeWidth(Integer pointDotStrokeWidth) {
+	public LineChartOptions setPointDotStrokeWidth(Integer pointDotStrokeWidth) {
 		this.pointDotStrokeWidth = pointDotStrokeWidth;
+        return this;
 	}
 
 	/**
@@ -147,8 +151,9 @@ public class LineChartOptions extends AbstractScalableChartOptions {
 	 *            decides whether to show a stroke for datasets (default is
 	 *            true)
 	 */
-	public void setDatasetStroke(Boolean datasetStroke) {
+	public LineChartOptions setDatasetStroke(Boolean datasetStroke) {
 		this.datasetStroke = datasetStroke;
+        return this;
 	}
 
 	/**
@@ -166,8 +171,9 @@ public class LineChartOptions extends AbstractScalableChartOptions {
 	 * @param datasetStrokeWidth
 	 *            the new dataset stroke width (default is 2).
 	 */
-	public void setDatasetStrokeWidth(Integer datasetStrokeWidth) {
+	public LineChartOptions setDatasetStrokeWidth(Integer datasetStrokeWidth) {
 		this.datasetStrokeWidth = datasetStrokeWidth;
+        return this;
 	}
 
 	/**
@@ -185,8 +191,9 @@ public class LineChartOptions extends AbstractScalableChartOptions {
 	 * @param datasetFill
 	 *            whether to fill the dataset with a color (default is true)
 	 */
-	public void setDatasetFill(Boolean datasetFill) {
+	public LineChartOptions setDatasetFill(Boolean datasetFill) {
 		this.datasetFill = datasetFill;
+        return this;
 	}
 
     @Override
@@ -210,6 +217,120 @@ public class LineChartOptions extends AbstractScalableChartOptions {
     @Override
     public LineChartOptions setScaleLabel(String scaleLabel) {
         super.setScaleLabel(scaleLabel);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleOverlay(Boolean scaleOverlay) {
+        super.setScaleOverlay(scaleOverlay);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleOverride(Boolean scaleOverride) {
+        super.setScaleOverride(scaleOverride);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleSteps(Integer scaleSteps) {
+        super.setScaleSteps(scaleSteps);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleStartValue(Integer scaleStartValue) {
+        super.setScaleStartValue(scaleStartValue);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleStepWidth(Integer scaleStepWidth) {
+        super.setScaleStepWidth(scaleStepWidth);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleLineColor(String scaleLineColor) {
+        super.setScaleLineColor(scaleLineColor);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleLineWidth(Integer scaleLineWidth) {
+        super.setScaleLineWidth(scaleLineWidth);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleFontFamily(String scaleFontFamily) {
+        super.setScaleFontFamily(scaleFontFamily);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleFontSize(Integer scaleFontSize) {
+        super.setScaleFontSize(scaleFontSize);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleFontStyle(String scaleFontStyle) {
+        super.setScaleFontStyle(scaleFontStyle);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleFontColor(String scaleFontColor) {
+        super.setScaleFontColor(scaleFontColor);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleShowGridLines(Boolean scaleShowGridLines) {
+        super.setScaleShowGridLines(scaleShowGridLines);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleGridLineColor(String scaleGridLineColor) {
+        super.setScaleGridLineColor(scaleGridLineColor);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setScaleGridLineWidth(Integer scaleGridLineWidth) {
+        super.setScaleGridLineWidth(scaleGridLineWidth);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setAnimation(Boolean animation) {
+        super.setAnimation(animation);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setAnimationSteps(Integer animationSteps) {
+        super.setAnimationSteps(animationSteps);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setAnimationEasing(String animationEasing) {
+        super.setAnimationEasing(animationEasing);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setOnAnimationComplete(String onAnimationComplete) {
+        super.setOnAnimationComplete(onAnimationComplete);
+        return this;
+    }
+
+    @Override
+    public LineChartOptions setInGraphDataShow(Boolean inGraphDataShow) {
+        super.setInGraphDataShow(inGraphDataShow);
         return this;
     }
 }

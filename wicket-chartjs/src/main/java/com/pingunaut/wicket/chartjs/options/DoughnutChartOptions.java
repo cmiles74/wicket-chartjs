@@ -148,4 +148,46 @@ public class DoughnutChartOptions extends PieChartOptions {
         super.setCrossTextFontStyle(crossTextFontStyle);
         return this;
     }
+
+    @Override
+    public DoughnutChartOptions setCrossTextFontStyle(String crossTextFontStyle) {
+        super.setCrossTextFontStyle(crossTextFontStyle);
+        return this;
+    }
+
+    @Override
+    public DoughnutChartOptions setAnimation(Boolean animation) {
+        super.setAnimation(animation);
+        return this;
+    }
+
+    @Override
+    public DoughnutChartOptions setAnimationSteps(Integer animationSteps) {
+        super.setAnimationSteps(animationSteps);
+        return this;
+    }
+
+    @Override
+    public DoughnutChartOptions setAnimationEasing(String animationEasing) {
+        super.setAnimationEasing(animationEasing);
+        return this;
+    }
+
+    @Override
+    public DoughnutChartOptions setOnAnimationComplete(String onAnimationComplete) {
+        super.setOnAnimationComplete(onAnimationComplete);
+        return this;
+    }
+
+    @Override
+    public DoughnutChartOptions setLegend(Boolean legend) {
+        super.setLegend(legend);
+        return this;
+    }
+
+    @Override
+    public DoughnutChartOptions setAnnotateDisplay(Boolean annotateDisplay) {
+        super.setAnnotateDisplay(annotateDisplay);
+        return this;
+    }
 }

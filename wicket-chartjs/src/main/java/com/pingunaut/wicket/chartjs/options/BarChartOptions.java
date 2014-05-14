@@ -59,8 +59,9 @@ public class BarChartOptions extends AbstractScalableChartOptions {
 	 * @param barShowStroke
 	 *            the new bar show stroke (default is true).
 	 */
-	public void setBarShowStroke(Boolean barShowStroke) {
+	public BarChartOptions setBarShowStroke(Boolean barShowStroke) {
 		this.barShowStroke = barShowStroke;
+        return this;
 	}
 
 	/**
@@ -78,8 +79,9 @@ public class BarChartOptions extends AbstractScalableChartOptions {
 	 * @param barStrokeWidth
 	 *            the new bar stroke width (default is 2).
 	 */
-	public void setBarStrokeWidth(Integer barStrokeWidth) {
+	public BarChartOptions setBarStrokeWidth(Integer barStrokeWidth) {
 		this.barStrokeWidth = barStrokeWidth;
+        return this;
 	}
 
 	/**
@@ -97,8 +99,9 @@ public class BarChartOptions extends AbstractScalableChartOptions {
 	 * @param barValueSpacing
 	 *            the spacing between each of the X value sets (default is 5)
 	 */
-	public void setBarValueSpacing(Integer barValueSpacing) {
+	public BarChartOptions setBarValueSpacing(Integer barValueSpacing) {
 		this.barValueSpacing = barValueSpacing;
+        return this;
 	}
 
 	/**
@@ -116,8 +119,146 @@ public class BarChartOptions extends AbstractScalableChartOptions {
 	 * @param barDatasetSpacing
 	 *            the spacing between data sets within X values (default is 1).
 	 */
-	public void setBarDatasetSpacing(Integer barDatasetSpacing) {
+	public BarChartOptions setBarDatasetSpacing(Integer barDatasetSpacing) {
 		this.barDatasetSpacing = barDatasetSpacing;
+        return this;
 	}
 
+    @Override
+    public BarChartOptions setScaleOverlay(Boolean scaleOverlay) {
+        super.setScaleOverlay(scaleOverlay);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleOverride(Boolean scaleOverride) {
+        super.setScaleOverride(scaleOverride);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleSteps(Integer scaleSteps) {
+        super.setScaleSteps(scaleSteps);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleStepWidth(Integer scaleStepWidth) {
+        super.setScaleStepWidth(scaleStepWidth);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleStartValue(Integer scaleStartValue) {
+        super.setScaleStartValue(scaleStartValue);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleLineColor(String scaleLineColor) {
+        super.setScaleLineColor(scaleLineColor);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleLineWidth(Integer scaleLineWidth) {
+        super.setScaleLineWidth(scaleLineWidth);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleShowLabels(Boolean scaleShowLabels) {
+        super.setScaleShowLabels(scaleShowLabels);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleLabel(String scaleLabel) {
+        super.setScaleLabel(scaleLabel);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleFontFamily(String scaleFontFamily) {
+        super.setScaleFontFamily(scaleFontFamily);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleFontSize(Integer scaleFontSize) {
+        super.setScaleFontSize(scaleFontSize);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleFontStyle(String scaleFontStyle) {
+        super.setScaleFontStyle(scaleFontStyle);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleFontColor(String scaleFontColor) {
+        super.setScaleFontColor(scaleFontColor);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleShowGridLines(Boolean scaleShowGridLines) {
+        super.setScaleShowGridLines(scaleShowGridLines);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleGridLineColor(String scaleGridLineColor) {
+        super.setScaleGridLineColor(scaleGridLineColor);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setScaleGridLineWidth(Integer scaleGridLineWidth) {
+        super.setScaleGridLineWidth(scaleGridLineWidth);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setAnimation(Boolean animation) {
+        super.setAnimation(animation);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setAnimationSteps(Integer animationSteps) {
+        super.setAnimationSteps(animationSteps);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setAnimationEasing(String animationEasing) {
+        super.setAnimationEasing(animationEasing);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setOnAnimationComplete(String onAnimationComplete) {
+        super.setOnAnimationComplete(onAnimationComplete);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setLegend(Boolean legend) {
+        super.setLegend(legend);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setAnnotateDisplay(Boolean annotateDisplay) {
+        super.setAnnotateDisplay(annotateDisplay);
+        return this;
+    }
+
+    @Override
+    public BarChartOptions setInGraphDataShow(Boolean inGraphDataShow) {
+        super.setInGraphDataShow(inGraphDataShow);
+        return this;
+    }
 }

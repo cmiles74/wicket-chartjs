@@ -76,8 +76,9 @@ public class PolarAreaChartOptions extends AbstractScalableChartOptions {
 	 * @param scaleShowLabelBackdrop
 	 *            decides whether to show a backdrop to the scale label
 	 */
-	public void setScaleShowLabelBackdrop(Boolean scaleShowLabelBackdrop) {
+	public PolarAreaChartOptions setScaleShowLabelBackdrop(Boolean scaleShowLabelBackdrop) {
 		this.scaleShowLabelBackdrop = scaleShowLabelBackdrop;
+        return this;
 	}
 
 	/**
@@ -96,8 +97,9 @@ public class PolarAreaChartOptions extends AbstractScalableChartOptions {
 	 *            the new scale backdrop color (default is
 	 *            "rgba(255,255,255,0.75)").
 	 */
-	public void setScaleBackdropColor(String scaleBackdropColor) {
+	public PolarAreaChartOptions setScaleBackdropColor(String scaleBackdropColor) {
 		this.scaleBackdropColor = scaleBackdropColor;
+        return this;
 	}
 
 	/**
@@ -116,8 +118,9 @@ public class PolarAreaChartOptions extends AbstractScalableChartOptions {
 	 *            the backdrop padding above & below the label in pixels
 	 *            (default is 2).
 	 */
-	public void setScaleBackdropPaddingY(Integer scaleBackdropPaddingY) {
+	public PolarAreaChartOptions setScaleBackdropPaddingY(Integer scaleBackdropPaddingY) {
 		this.scaleBackdropPaddingY = scaleBackdropPaddingY;
+        return this;
 	}
 
 	/**
@@ -136,8 +139,9 @@ public class PolarAreaChartOptions extends AbstractScalableChartOptions {
 	 *            the backdrop padding to the side of the label in pixels
 	 *            (default is 2).
 	 */
-	public void setScaleBackdropPaddingX(Integer scaleBackdropPaddingX) {
+	public PolarAreaChartOptions setScaleBackdropPaddingX(Integer scaleBackdropPaddingX) {
 		this.scaleBackdropPaddingX = scaleBackdropPaddingX;
+        return this;
 	}
 
 	/**
@@ -156,8 +160,9 @@ public class PolarAreaChartOptions extends AbstractScalableChartOptions {
 	 *            decides whether we should show a stroke on each segment
 	 *            (default is true)
 	 */
-	public void setSegmentShowStroke(Boolean segmentShowStroke) {
+	public PolarAreaChartOptions setSegmentShowStroke(Boolean segmentShowStroke) {
 		this.segmentShowStroke = segmentShowStroke;
+        return this;
 	}
 
 	/**
@@ -175,8 +180,9 @@ public class PolarAreaChartOptions extends AbstractScalableChartOptions {
 	 * @param segmentStrokeColor
 	 *            the new segment stroke color (default is "#fff").
 	 */
-	public void setSegmentStrokeColor(String segmentStrokeColor) {
+	public PolarAreaChartOptions setSegmentStrokeColor(String segmentStrokeColor) {
 		this.segmentStrokeColor = segmentStrokeColor;
+        return this;
 	}
 
 	/**
@@ -194,8 +200,9 @@ public class PolarAreaChartOptions extends AbstractScalableChartOptions {
 	 * @param segmentStrokeWidth
 	 *            the new segment stroke width (default is 2).
 	 */
-	public void setSegmentStrokeWidth(Integer segmentStrokeWidth) {
+	public PolarAreaChartOptions setSegmentStrokeWidth(Integer segmentStrokeWidth) {
 		this.segmentStrokeWidth = segmentStrokeWidth;
+        return this;
 	}
 
 	/**
@@ -214,8 +221,9 @@ public class PolarAreaChartOptions extends AbstractScalableChartOptions {
 	 *            decides whether we animate the rotation of the pie (default is
 	 *            true).
 	 */
-	public void setAnimateRotate(Boolean animateRotate) {
+	public PolarAreaChartOptions setAnimateRotate(Boolean animateRotate) {
 		this.animateRotate = animateRotate;
+        return this;
 	}
 
 	/**
@@ -234,7 +242,146 @@ public class PolarAreaChartOptions extends AbstractScalableChartOptions {
 	 *            decides whether we animate scaling the Pie from the center
 	 *            (default is false).
 	 */
-	public void setAnimateScale(Boolean animateScale) {
+	public PolarAreaChartOptions setAnimateScale(Boolean animateScale) {
 		this.animateScale = animateScale;
+        return this;
 	}
+
+    @Override
+    public PolarAreaChartOptions setScaleOverride(Boolean scaleOverride) {
+        super.setScaleOverride(scaleOverride);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleSteps(Integer scaleSteps) {
+        super.setScaleSteps(scaleSteps);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleStepWidth(Integer scaleStepWidth) {
+        super.setScaleStepWidth(scaleStepWidth);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleStartValue(Integer scaleStartValue) {
+        super.setScaleStartValue(scaleStartValue);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleLineColor(String scaleLineColor) {
+        super.setScaleLineColor(scaleLineColor);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleLineWidth(Integer scaleLineWidth) {
+        super.setScaleLineWidth(scaleLineWidth);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleShowLabels(Boolean scaleShowLabels) {
+        super.setScaleShowLabels(scaleShowLabels);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleOverlay(Boolean scaleOverlay) {
+        super.setScaleOverlay(scaleOverlay);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleLabel(String scaleLabel) {
+        super.setScaleLabel(scaleLabel);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleFontFamily(String scaleFontFamily) {
+        super.setScaleFontFamily(scaleFontFamily);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleFontSize(Integer scaleFontSize) {
+        super.setScaleFontSize(scaleFontSize);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleFontStyle(String scaleFontStyle) {
+        super.setScaleFontStyle(scaleFontStyle);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleFontColor(String scaleFontColor) {
+        super.setScaleFontColor(scaleFontColor);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleShowGridLines(Boolean scaleShowGridLines) {
+        super.setScaleShowGridLines(scaleShowGridLines);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleGridLineColor(String scaleGridLineColor) {
+        super.setScaleGridLineColor(scaleGridLineColor);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setScaleGridLineWidth(Integer scaleGridLineWidth) {
+        super.setScaleGridLineWidth(scaleGridLineWidth);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setAnimation(Boolean animation) {
+        super.setAnimation(animation);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setAnimationSteps(Integer animationSteps) {
+        super.setAnimationSteps(animationSteps);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setAnimationEasing(String animationEasing) {
+        super.setAnimationEasing(animationEasing);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setOnAnimationComplete(String onAnimationComplete) {
+        super.setOnAnimationComplete(onAnimationComplete);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setLegend(Boolean legend) {
+        super.setLegend(legend);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setAnnotateDisplay(Boolean annotateDisplay) {
+        super.setAnnotateDisplay(annotateDisplay);
+        return this;
+    }
+
+    @Override
+    public PolarAreaChartOptions setInGraphDataShow(Boolean inGraphDataShow) {
+        super.setInGraphDataShow(inGraphDataShow);
+        return this;
+    }
 }

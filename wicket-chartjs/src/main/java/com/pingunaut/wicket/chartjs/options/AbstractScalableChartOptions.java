@@ -96,8 +96,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 *            decides if the scale above the chart data is shown (default is
 	 *            false)
 	 */
-	public void setScaleOverlay(Boolean scaleOverlay) {
+	public AbstractScalableChartOptions setScaleOverlay(Boolean scaleOverlay) {
 		this.scaleOverlay = scaleOverlay;
+        return this;
 	}
 
 	/**
@@ -115,8 +116,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 * @param scaleOverride
 	 *            decides if you want to override with a hard coded scale
 	 */
-	public void setScaleOverride(Boolean scaleOverride) {
+	public AbstractScalableChartOptions setScaleOverride(Boolean scaleOverride) {
 		this.scaleOverride = scaleOverride;
+        return this;
 	}
 
 	/**
@@ -135,8 +137,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 *            the number of steps in a hard coded scale (required if
 	 *            scaleOverride == true, default is null).
 	 */
-	public void setScaleSteps(Integer scaleSteps) {
+	public AbstractScalableChartOptions setScaleSteps(Integer scaleSteps) {
 		this.scaleSteps = scaleSteps;
+        return this;
 	}
 
 	/**
@@ -155,8 +158,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 *            the value jump in the hard coded scale (required if
 	 *            scaleOverride == true, default is null).
 	 */
-	public void setScaleStepWidth(Integer scaleStepWidth) {
+	public AbstractScalableChartOptions setScaleStepWidth(Integer scaleStepWidth) {
 		this.scaleStepWidth = scaleStepWidth;
+        return this;
 	}
 
 	/**
@@ -175,8 +179,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 *            the scale starting value (required if scaleOverride == true,
 	 *            default is null).
 	 */
-	public void setScaleStartValue(Integer scaleStartValue) {
+	public AbstractScalableChartOptions setScaleStartValue(Integer scaleStartValue) {
 		this.scaleStartValue = scaleStartValue;
+        return this;
 	}
 
 	/**
@@ -194,8 +199,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 * @param scaleLineColor
 	 *            color of the scale line
 	 */
-	public void setScaleLineColor(String scaleLineColor) {
+	public AbstractScalableChartOptions setScaleLineColor(String scaleLineColor) {
 		this.scaleLineColor = scaleLineColor;
+        return this;
 	}
 
 	/**
@@ -213,8 +219,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 * @param scaleLineWidth
 	 *            the pixel width of the scale line
 	 */
-	public void setScaleLineWidth(Integer scaleLineWidth) {
+	public AbstractScalableChartOptions setScaleLineWidth(Integer scaleLineWidth) {
 		this.scaleLineWidth = scaleLineWidth;
+        return this;
 	}
 
 	/**
@@ -274,8 +281,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 *            scale label font declaration for the scale label (default is
 	 *            "'Arial'").
 	 */
-	public void setScaleFontFamily(String scaleFontFamily) {
+	public AbstractScalableChartOptions setScaleFontFamily(String scaleFontFamily) {
 		this.scaleFontFamily = scaleFontFamily;
+        return this;
 	}
 
 	/**
@@ -293,8 +301,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 * @param scaleFontSize
 	 *            the scale label font size in pixels
 	 */
-	public void setScaleFontSize(Integer scaleFontSize) {
+	public AbstractScalableChartOptions setScaleFontSize(Integer scaleFontSize) {
 		this.scaleFontSize = scaleFontSize;
+        return this;
 	}
 
 	/**
@@ -312,8 +321,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 * @param scaleFontStyle
 	 *            the scale label font weight style (default is "normal").
 	 */
-	public void setScaleFontStyle(String scaleFontStyle) {
+	public AbstractScalableChartOptions setScaleFontStyle(String scaleFontStyle) {
 		this.scaleFontStyle = scaleFontStyle;
+        return this;
 	}
 
 	/**
@@ -331,8 +341,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 * @param scaleFontColor
 	 *            the scale label font color (default is "#666").
 	 */
-	public void setScaleFontColor(String scaleFontColor) {
+	public AbstractScalableChartOptions setScaleFontColor(String scaleFontColor) {
 		this.scaleFontColor = scaleFontColor;
+        return this;
 	}
 
 	/**
@@ -351,8 +362,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 *            decides whether grid lines are shown across the chart (default
 	 *            is true).
 	 */
-	public void setScaleShowGridLines(Boolean scaleShowGridLines) {
+	public AbstractScalableChartOptions setScaleShowGridLines(Boolean scaleShowGridLines) {
 		this.scaleShowGridLines = scaleShowGridLines;
+        return this;
 	}
 
 	/**
@@ -370,8 +382,9 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 * @param scaleGridLineColor
 	 *            the new scale grid line color (default is "rgba(0,0,0,.05)").
 	 */
-	public void setScaleGridLineColor(String scaleGridLineColor) {
+	public AbstractScalableChartOptions setScaleGridLineColor(String scaleGridLineColor) {
 		this.scaleGridLineColor = scaleGridLineColor;
+        return this;
 	}
 
 	/**
@@ -389,7 +402,50 @@ public abstract class AbstractScalableChartOptions extends AbstractChartOptions 
 	 * @param scaleGridLineWidth
 	 *            the new scale grid line width (default is 1)
 	 */
-	public void setScaleGridLineWidth(Integer scaleGridLineWidth) {
+	public AbstractScalableChartOptions setScaleGridLineWidth(Integer scaleGridLineWidth) {
 		this.scaleGridLineWidth = scaleGridLineWidth;
+        return this;
 	}
+
+    @Override
+    public AbstractScalableChartOptions setAnimation(Boolean animation) {
+        super.setAnimation(animation);
+        return this;
+    }
+
+    @Override
+    public AbstractScalableChartOptions setAnimationSteps(Integer animationSteps) {
+        super.setAnimationSteps(animationSteps);
+        return this;
+    }
+
+    @Override
+    public AbstractScalableChartOptions setAnimationEasing(String animationEasing) {
+        super.setAnimationEasing(animationEasing);
+        return this;
+    }
+
+    @Override
+    public AbstractScalableChartOptions setOnAnimationComplete(String onAnimationComplete) {
+        super.setOnAnimationComplete(onAnimationComplete);
+        return this;
+    }
+
+    @Override
+    public AbstractScalableChartOptions setLegend(Boolean legend) {
+        super.setLegend(legend);
+        return this;
+    }
+
+    @Override
+    public AbstractScalableChartOptions setAnnotateDisplay(Boolean annotateDisplay) {
+        super.setAnnotateDisplay(annotateDisplay);
+        return this;
+    }
+
+    @Override
+    public AbstractScalableChartOptions setInGraphDataShow(Boolean inGraphDataShow) {
+        super.setInGraphDataShow(inGraphDataShow);
+        return this;
+    }
 }

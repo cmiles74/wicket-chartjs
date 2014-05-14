@@ -100,8 +100,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 *            decides whether to show a backdrop to the scale label (default
 	 *            is true).
 	 */
-	public void setScaleShowLabelBackdrop(Boolean scaleShowLabelBackdrop) {
+	public RadarChartOptions setScaleShowLabelBackdrop(Boolean scaleShowLabelBackdrop) {
 		this.scaleShowLabelBackdrop = scaleShowLabelBackdrop;
+        return this;
 	}
 
 	/**
@@ -120,8 +121,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 *            the new scale backdrop color (default is
 	 *            "rgba(255,255,255,0.75)").
 	 */
-	public void setScaleBackdropColor(String scaleBackdropColor) {
+	public RadarChartOptions setScaleBackdropColor(String scaleBackdropColor) {
 		this.scaleBackdropColor = scaleBackdropColor;
+        return this;
 	}
 
 	/**
@@ -140,8 +142,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 *            the backdrop padding above & below the label in pixels
 	 *            (default is 2).
 	 */
-	public void setScaleBackdropPaddingY(Integer scaleBackdropPaddingY) {
+	public RadarChartOptions setScaleBackdropPaddingY(Integer scaleBackdropPaddingY) {
 		this.scaleBackdropPaddingY = scaleBackdropPaddingY;
+        return this;
 	}
 
 	/**
@@ -160,8 +163,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 *            the backdrop padding to the side of the label in pixels
 	 *            (default is 2)
 	 */
-	public void setScaleBackdropPaddingX(Integer scaleBackdropPaddingX) {
+	public RadarChartOptions setScaleBackdropPaddingX(Integer scaleBackdropPaddingX) {
 		this.scaleBackdropPaddingX = scaleBackdropPaddingX;
+        return this;
 	}
 
 	/**
@@ -180,8 +184,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 *            decides whether to show the angle lines out of the radar
 	 *            (default is true)
 	 */
-	public void setAngleShowLineOut(Boolean angleShowLineOut) {
+	public RadarChartOptions setAngleShowLineOut(Boolean angleShowLineOut) {
 		this.angleShowLineOut = angleShowLineOut;
+        return this;
 	}
 
 	/**
@@ -199,8 +204,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 * @param angleLineColor
 	 *            the new angle line color (default is "rgba(0,0,0,.1)").
 	 */
-	public void setAngleLineColor(String angleLineColor) {
+	public RadarChartOptions setAngleLineColor(String angleLineColor) {
 		this.angleLineColor = angleLineColor;
+        return this;
 	}
 
 	/**
@@ -218,8 +224,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 * @param angleLineWidth
 	 *            the new angle line width (default is 1)
 	 */
-	public void setAngleLineWidth(Integer angleLineWidth) {
+	public RadarChartOptions setAngleLineWidth(Integer angleLineWidth) {
 		this.angleLineWidth = angleLineWidth;
+        return this;
 	}
 
 	/**
@@ -237,8 +244,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 * @param pointLabelFontFamily
 	 *            the new point label font family (default is "'Arial'").
 	 */
-	public void setPointLabelFontFamily(String pointLabelFontFamily) {
+	public RadarChartOptions setPointLabelFontFamily(String pointLabelFontFamily) {
 		this.pointLabelFontFamily = pointLabelFontFamily;
+        return this;
 	}
 
 	/**
@@ -256,8 +264,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 * @param pointLabelFontStyle
 	 *            the new point label font style (default is "normal").
 	 */
-	public void setPointLabelFontStyle(String pointLabelFontStyle) {
+	public RadarChartOptions setPointLabelFontStyle(String pointLabelFontStyle) {
 		this.pointLabelFontStyle = pointLabelFontStyle;
+        return this;
 	}
 
 	/**
@@ -275,8 +284,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 * @param pointLabelFontSize
 	 *            the new point label font size (default is 12).
 	 */
-	public void setPointLabelFontSize(Integer pointLabelFontSize) {
+	public RadarChartOptions setPointLabelFontSize(Integer pointLabelFontSize) {
 		this.pointLabelFontSize = pointLabelFontSize;
+        return this;
 	}
 
 	/**
@@ -294,8 +304,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 * @param pointLabelFontColor
 	 *            the new point label font color (default is "#666").
 	 */
-	public void setPointLabelFontColor(String pointLabelFontColor) {
+	public RadarChartOptions setPointLabelFontColor(String pointLabelFontColor) {
 		this.pointLabelFontColor = pointLabelFontColor;
+        return this;
 	}
 
 	/**
@@ -314,11 +325,13 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 *            decides whether to show a dot for each point (default is
 	 *            true).
 	 */
-	public void setPointDot(Boolean pointDot) {
+	public RadarChartOptions setPointDot(Boolean pointDot) {
 		this.pointDot = pointDot;
+        return this;
 	}
 
-	/**
+
+    /**
 	 * Gets the point dot radius.
 	 * 
 	 * @return the point dot radius
@@ -333,8 +346,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 * @param pointDotRadius
 	 *            the new point dot radius (default is 3)
 	 */
-	public void setPointDotRadius(Integer pointDotRadius) {
+	public RadarChartOptions setPointDotRadius(Integer pointDotRadius) {
 		this.pointDotRadius = pointDotRadius;
+        return this;
 	}
 
 	/**
@@ -352,8 +366,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 * @param pointDotStrokeWidth
 	 *            the new point dot stroke width (default is 1)
 	 */
-	public void setPointDotStrokeWidth(Integer pointDotStrokeWidth) {
+	public RadarChartOptions setPointDotStrokeWidth(Integer pointDotStrokeWidth) {
 		this.pointDotStrokeWidth = pointDotStrokeWidth;
+        return this;
 	}
 
 	/**
@@ -372,8 +387,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 *            decides whether to show a stroke for datasets (default is
 	 *            true)
 	 */
-	public void setDatasetStroke(Boolean datasetStroke) {
+	public RadarChartOptions setDatasetStroke(Boolean datasetStroke) {
 		this.datasetStroke = datasetStroke;
+        return this;
 	}
 
 	/**
@@ -391,8 +407,9 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 * @param datasetStrokeWidth
 	 *            the new dataset stroke width (default is 2)
 	 */
-	public void setDatasetStrokeWidth(Integer datasetStrokeWidth) {
+	public RadarChartOptions setDatasetStrokeWidth(Integer datasetStrokeWidth) {
 		this.datasetStrokeWidth = datasetStrokeWidth;
+        return this;
 	}
 
 	/**
@@ -411,7 +428,50 @@ public class RadarChartOptions extends AbstractChartOptions {
 	 *            decides whether to fill the dataset with a color (default is
 	 *            true).
 	 */
-	public void setDatasetFill(Boolean datasetFill) {
+	public RadarChartOptions setDatasetFill(Boolean datasetFill) {
 		this.datasetFill = datasetFill;
+        return this;
 	}
+
+    @Override
+    public RadarChartOptions setAnimation(Boolean animation) {
+        super.setAnimation(animation);
+        return this;
+    }
+
+    @Override
+    public RadarChartOptions setAnimationSteps(Integer animationSteps) {
+        super.setAnimationSteps(animationSteps);
+        return this;
+    }
+
+    @Override
+    public RadarChartOptions setAnimationEasing(String animationEasing) {
+        super.setAnimationEasing(animationEasing);
+        return this;
+    }
+
+    @Override
+    public RadarChartOptions setOnAnimationComplete(String onAnimationComplete) {
+        super.setOnAnimationComplete(onAnimationComplete);
+        return this;
+    }
+
+    @Override
+    public RadarChartOptions setLegend(Boolean legend) {
+        super.setLegend(legend);
+        return this;
+    }
+
+    @Override
+    public RadarChartOptions setAnnotateDisplay(Boolean annotateDisplay) {
+        super.setAnnotateDisplay(annotateDisplay);
+        return this;
+    }
+
+    @Override
+    public RadarChartOptions setInGraphDataShow(Boolean inGraphDataShow) {
+        super.setInGraphDataShow(inGraphDataShow);
+        return this;
+    }
 }
