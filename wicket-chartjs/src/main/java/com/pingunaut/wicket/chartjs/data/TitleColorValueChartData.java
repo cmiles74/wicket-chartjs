@@ -9,12 +9,12 @@ import java.io.Serializable;
  * Provides a data object that models a data point in a chart that also includes a title attribute.
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class TitleColorValueChartData implements Serializable {
+public class TitleColorValueChartData<T> implements Serializable {
 
     /**
      * The numeric value of this data point.
      */
-    private Integer value;
+    private T value;
 
     /**
      * The title that accompanies this data point.
@@ -32,7 +32,7 @@ public class TitleColorValueChartData implements Serializable {
      * @param value Numeric value of this data point
      * @param color Color of this data point
      */
-    public TitleColorValueChartData(Integer value, String color) {
+    public TitleColorValueChartData(T value, String color) {
         this(value, null, color);
     }
 
@@ -42,7 +42,7 @@ public class TitleColorValueChartData implements Serializable {
      * @param value Numeric value of this data point
      * @param color Color of this data point
      */
-    public TitleColorValueChartData(Integer value, Color color) {
+    public TitleColorValueChartData(T value, Color color) {
         this(value, null, WebColor.toCssColor(color));
     }
 
@@ -53,7 +53,7 @@ public class TitleColorValueChartData implements Serializable {
      * @param title Title that accompanies this data pont
      * @param color Color of this data point
      */
-    public TitleColorValueChartData(Integer value, String title, Color color) {
+    public TitleColorValueChartData(T value, String title, Color color) {
 
         this(value, title, WebColor.toCssColor(color));
     }
@@ -65,18 +65,18 @@ public class TitleColorValueChartData implements Serializable {
      * @param title Title that accompanies this data pont
      * @param color Color of this data point
      */
-    public TitleColorValueChartData(Integer value, String title, String color) {
+    public TitleColorValueChartData(T value, String title, String color) {
 
         this.value = value;
         this.title = title;
         this.color = color;
     }
 
-    public Integer getValue() {
+    public T getValue() {
         return value;
     }
 
-    public void setValue(Integer value) {
+    public void setValue(T value) {
         this.value = value;
     }
 

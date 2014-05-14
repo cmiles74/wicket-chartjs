@@ -96,11 +96,11 @@ public class ExamplePage extends WebPage {
         add(new DoughnutChartPanel("doughnutChart",
                 Model.of(new Doughnut(
                         new ArrayList<DoughnutChartData>() {{
-                            add(new DoughnutChartData(30, "Things", Color.BLUE));
-                            add(new DoughnutChartData(50, "Gazooks", Color.DARK_GRAY));
-                            add(new DoughnutChartData(100, "Zuckers", Color.MAGENTA));
-                            add(new DoughnutChartData(40, "Gladiolas", Color.ORANGE));
-                            add(new DoughnutChartData(50, "Cookies", Color.GREEN));
+                            add(new DoughnutChartData(30.24, "Things", Color.BLUE));
+                            add(new DoughnutChartData(50.12, "Gazooks", Color.DARK_GRAY));
+                            add(new DoughnutChartData(100.12, "Zuckers", Color.MAGENTA));
+                            add(new DoughnutChartData(40.928, "Gladiolas", Color.ORANGE));
+                            add(new DoughnutChartData(50.123, "Cookies", Color.GREEN));
                         }},
                         new DoughnutChartOptions()
                                 .setInGraphDataShow(true)

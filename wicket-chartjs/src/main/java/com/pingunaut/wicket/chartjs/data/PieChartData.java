@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
  * @author Martin Spielmann, Brill Pappin
  */
 @JsonInclude(Include.NON_NULL)
-public class PieChartData extends TitleColorValueChartData {
+public class PieChartData<T> extends TitleColorValueChartData {
 
 	@JsonIgnore
 	private static final long serialVersionUID = -5122104387810776812L;
@@ -38,11 +38,11 @@ public class PieChartData extends TitleColorValueChartData {
 	 * @param color
 	 *            the color
 	 */
-	public PieChartData(Integer value, String color) {
-		super(value, color);
+    public PieChartData(T value, String color) {
+        super(value, color);
 	}
 
-    public PieChartData(Integer value, String label, String color) {
+    public PieChartData(T value, String label, String color) {
         super(value, label, color);
     }
 }

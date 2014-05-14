@@ -27,7 +27,7 @@ import java.awt.*;
  * @author Martin Spielmann
  */
 @JsonInclude(Include.NON_NULL)
-public class DoughnutChartData extends TitleColorValueChartData {
+public class DoughnutChartData<T> extends TitleColorValueChartData {
 
 	@JsonIgnore
 	private static final long serialVersionUID = -5122104387810776812L;
@@ -40,8 +40,8 @@ public class DoughnutChartData extends TitleColorValueChartData {
 	 * @param color
 	 *            the color
 	 */
-	public DoughnutChartData(Integer value, String color) {
-		super(value, color);
+    public DoughnutChartData(T value, String color) {
+        super(value, color);
 	}
 
     /**
@@ -52,7 +52,7 @@ public class DoughnutChartData extends TitleColorValueChartData {
      * @param color
      *            the color
      */
-    public DoughnutChartData(Integer value, Color color) {
+    public DoughnutChartData(T value, Color color) {
         super(value, color);
     }
 
@@ -63,7 +63,7 @@ public class DoughnutChartData extends TitleColorValueChartData {
      * @param title Title that accompanies this data point
      * @param color Color of this data point
      */
-    public DoughnutChartData(Integer value, String title, String color) {
+    public DoughnutChartData(T value, String title, String color) {
         super(value, title, color);
     }
 
@@ -74,7 +74,7 @@ public class DoughnutChartData extends TitleColorValueChartData {
      * @param title Title that accompanies this data point
      * @param color Color of this data point
      */
-    public DoughnutChartData(Integer value, String title, Color color) {
+    public DoughnutChartData(T value, String title, Color color) {
         super(value, title, color);
     }
 }
