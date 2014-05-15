@@ -18,7 +18,9 @@ package com.pingunaut.wicket.chartjs.data.sets;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
+import com.pingunaut.wicket.chartjs.data.WebColor;
 
+import java.awt.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -33,18 +35,25 @@ import java.util.List;
 @JsonInclude(Include.NON_NULL)
 public abstract class AbstractBaseDataSet<T> implements Serializable {
 
+    /**
+     * The default fill color.
+     */
+    public static final String DEFAULT_FILL_COLOR = "rgba(220,220,220,0.5)";
+    /**
+     * The stroke color.
+     */
+    public static final String DEFAULT_STROKE_COLOR = "rgba(220,220,220,1)";
     @JsonIgnore
     private static final long serialVersionUID = 1581171902504828797L;
-
     /**
      * The fill color.
      */
-    protected String fillColor = "rgba(220,220,220,0.5)";
+    protected String fillColor;
 
     /**
      * The stroke color.
      */
-    protected String strokeColor = "rgba(220,220,220,1)";
+    protected String strokeColor;
 
     /**
      * The data.
@@ -64,6 +73,22 @@ public abstract class AbstractBaseDataSet<T> implements Serializable {
      * @param values the data values
      */
     public AbstractBaseDataSet(List<T> values) {
+        this(DEFAULT_FILL_COLOR, DEFAULT_STROKE_COLOR, values);
+    }
+
+    /**
+     * Instantiates a new abstract base data set.
+     */
+    public AbstractBaseDataSet(Color fillColor, Color strokeColor, List<T> values) {
+        this(WebColor.toCssColor(fillColor), WebColor.toCssColor(strokeColor), values);
+    }
+
+    /**
+     * Instantiates a new abstract base data set.
+     */
+    public AbstractBaseDataSet(String fillColor, String strokeColor, List<T> values) {
+        this.fillColor = fillColor;
+        this.strokeColor = strokeColor;
         data = values;
     }
 
@@ -74,6 +99,17 @@ public abstract class AbstractBaseDataSet<T> implements Serializable {
      */
     public String getFillColor() {
         return fillColor;
+    }
+
+    /**
+     * Sets the fill color.
+     *
+     * @param fillColor the fill color
+     * @return the abstract base data set
+     */
+    public AbstractBaseDataSet setFillColor(Color fillColor) {
+        this.fillColor = WebColor.toCssColor(fillColor);
+        return this;
     }
 
     /**
@@ -94,6 +130,17 @@ public abstract class AbstractBaseDataSet<T> implements Serializable {
      */
     public String getStrokeColor() {
         return strokeColor;
+    }
+
+    /**
+     * Sets the stroke color.
+     *
+     * @param strokeColor the stroke color
+     * @return the abstract base data set
+     */
+    public AbstractBaseDataSet setStrokeColor(Color strokeColor) {
+        this.strokeColor = WebColor.toCssColor(strokeColor);
+        return this;
     }
 
     /**

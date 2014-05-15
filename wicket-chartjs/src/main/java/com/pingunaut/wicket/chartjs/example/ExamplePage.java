@@ -74,7 +74,8 @@ public class ExamplePage extends WebPage {
         add(new BarChartPanel("barChart",
                 Model.of(new Bar(new BarChartData(Arrays.asList(new String[]{"Jan", "Feb", "Mar", "Apr"}),
                         new ArrayList<BarDataSet>() {{
-                            add(new BarDataSet(Arrays.asList(new Double[]{4.25, 3.25, 5.5, 6.25})));
+                            add(new BarDataSet(Color.BLUE, Color.GRAY, Arrays.asList(new Double[]{4.25, 3.25, 5.5, 6.25})));
+                            add(new BarDataSet(Color.GREEN, Color.GRAY, Arrays.asList(new Double[]{3.25, 2.25, 4.5, 5.25})));
                         }}
                 ), new BarChartOptions()
                         .setAnnotateDisplay(true)

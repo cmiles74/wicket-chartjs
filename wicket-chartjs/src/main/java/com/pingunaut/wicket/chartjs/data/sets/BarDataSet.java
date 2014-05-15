@@ -18,6 +18,7 @@ package com.pingunaut.wicket.chartjs.data.sets;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.pingunaut.wicket.chartjs.data.BarChartData;
 
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -48,4 +49,11 @@ public class BarDataSet<T> extends AbstractBaseDataSet {
         super(values);
 	}
 
+    public BarDataSet(Color fillColor, Color strokeColor, List values) {
+        super(fillColor, strokeColor, values);
+    }
+
+    public BarDataSet(String fillColor, String strokeColor, List values) {
+        super(fillColor, strokeColor, values);
+    }
 }
