@@ -18,6 +18,7 @@ package com.pingunaut.wicket.chartjs.data.sets;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.pingunaut.wicket.chartjs.data.LineChartData;
 
+import java.awt.*;
 import java.util.List;
 
 /**
@@ -48,4 +49,11 @@ public class LineDataSet<T> extends AbstractPointColorDataSet {
         super(values);
 	}
 
+    public LineDataSet(Color fillColor, Color strokeColor, List values) {
+        super(fillColor, strokeColor, values);
+    }
+
+    public LineDataSet(String fillColor, String strokeColor, List values) {
+        super(fillColor, strokeColor, values);
+    }
 }

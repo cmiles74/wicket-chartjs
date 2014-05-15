@@ -63,7 +63,7 @@ public class ExamplePage extends WebPage {
         add(new LineChartPanel("lineChart",
                 Model.of(new Line(new LineChartData(Arrays.asList(new String[]{"Jan", "Feb", "Mar", "Apr"}),
                         new ArrayList<LineDataSet>() {{
-                            add(new LineDataSet(Arrays.asList(new Double[]{4.25, 3.25, 5.5, 6.25})));
+                            add(new LineDataSet(Color.ORANGE, Color.GRAY, Arrays.asList(new Double[]{4.25, 3.25, 5.5, 6.25})));
                         }}
                 ), new LineChartOptions()
                         .setAnnotateDisplay(true)

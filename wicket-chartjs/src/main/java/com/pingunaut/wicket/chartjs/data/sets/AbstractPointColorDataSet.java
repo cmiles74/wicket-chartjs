@@ -19,6 +19,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -54,11 +55,19 @@ public abstract class AbstractPointColorDataSet<T> extends AbstractBaseDataSet {
 	 *            the values
 	 */
     public AbstractPointColorDataSet(List<T> values) {
-        setData(values);
+        super(values);
     }
 
-	/**
-	 * Gets the point color.
+    public AbstractPointColorDataSet(Color fillColor, Color strokeColor, List values) {
+        super(fillColor, strokeColor, values);
+    }
+
+    public AbstractPointColorDataSet(String fillColor, String strokeColor, List values) {
+        super(fillColor, strokeColor, values);
+    }
+
+    /**
+     * Gets the point color.
 	 * 
 	 * @return the point color
 	 */

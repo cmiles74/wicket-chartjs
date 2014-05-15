@@ -43,6 +43,7 @@ public abstract class AbstractBaseDataSet<T> implements Serializable {
      * The stroke color.
      */
     public static final String DEFAULT_STROKE_COLOR = "rgba(220,220,220,1)";
+
     @JsonIgnore
     private static final long serialVersionUID = 1581171902504828797L;
     /**
@@ -107,8 +108,8 @@ public abstract class AbstractBaseDataSet<T> implements Serializable {
      * @param fillColor the fill color
      * @return the abstract base data set
      */
-    public AbstractBaseDataSet setFillColor(Color fillColor) {
-        this.fillColor = WebColor.toCssColor(fillColor);
+    public AbstractBaseDataSet setFillColor(String fillColor) {
+        this.fillColor = fillColor;
         return this;
     }
 
@@ -118,8 +119,8 @@ public abstract class AbstractBaseDataSet<T> implements Serializable {
      * @param fillColor the fill color
      * @return the abstract base data set
      */
-    public AbstractBaseDataSet setFillColor(String fillColor) {
-        this.fillColor = fillColor;
+    public AbstractBaseDataSet setFillColor(Color fillColor) {
+        this.fillColor = WebColor.toCssColor(fillColor);
         return this;
     }
 
@@ -138,8 +139,8 @@ public abstract class AbstractBaseDataSet<T> implements Serializable {
      * @param strokeColor the stroke color
      * @return the abstract base data set
      */
-    public AbstractBaseDataSet setStrokeColor(Color strokeColor) {
-        this.strokeColor = WebColor.toCssColor(strokeColor);
+    public AbstractBaseDataSet setStrokeColor(String strokeColor) {
+        this.strokeColor = strokeColor;
         return this;
     }
 
@@ -149,8 +150,8 @@ public abstract class AbstractBaseDataSet<T> implements Serializable {
      * @param strokeColor the stroke color
      * @return the abstract base data set
      */
-    public AbstractBaseDataSet setStrokeColor(String strokeColor) {
-        this.strokeColor = strokeColor;
+    public AbstractBaseDataSet setStrokeColor(Color strokeColor) {
+        this.strokeColor = WebColor.toCssColor(strokeColor);
         return this;
     }
 
